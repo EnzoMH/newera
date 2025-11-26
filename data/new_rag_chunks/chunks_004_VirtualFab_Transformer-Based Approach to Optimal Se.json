@@ -1,0 +1,129 @@
+{
+  "source": "ArXiv",
+  "filename": "004_VirtualFab_Transformer-Based Approach to Optimal Se.pdf",
+  "domain": "VirtualFab",
+  "total_chars": 83277,
+  "total_chunks": 15,
+  "chunks": [
+    {
+      "id": 7,
+      "content": "ights for designing\nefﬁcient, cost-effective monitoring systems by optimizing sensor conﬁgurations. This research high-\nlights the capability of attention-based deep learning to advance proactive maintenance, enhancing\noperational reliability and yield in semiconductor manufacturing.",
+      "size": 284,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 8,
+      "content": "proactive maintenance, enhancing\noperational reliability and yield in semiconductor manufacturing. Keywords Optimal Sensor Placement · Neural Networks · Transformer · Attention Mechanism · Probe Card · Failure\nMode Analysis · Real-time Monitoring · Sensor Networks · Structural Health Monitoring · Electrical Wafer Sort\n1\nIntroduction\nIn the intricate landscape of semiconductor manufacturing, where precision and reliability are paramount, probe cards\n(PCs) stand as indispensable components.",
+      "size": 493,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 9,
+      "content": "where precision and reliability are paramount, probe cards\n(PCs) stand as indispensable components. These critical intermediary tools bridge the gap between silicon wafers and\nautomated test equipment (ATE), playing a crucial role in identifying and preventing defective integrated circuit (IC)\ndies to next move on to the resource-intensive packaging stage, thereby mitigating consumer risks and minimizing\narXiv:2509.07603v1  [cs.LG]  9 Sep 2025\n\n=== Page 2 ===\nTransformer-Based Approach to Optimal Sensor Placement\nA PREPRINT\npotential economic losses [1].",
+      "size": 560,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 10,
+      "content": "==\nTransformer-Based Approach to Optimal Sensor Placement\nA PREPRINT\npotential economic losses [1]. As the primary interface for the electrical testing of ICs fabricated on wafers, the\nintegrity and functionality of PCs directly impact the quality assurance process. Failures in these sophisticated devices,\nwhich can manifest as microscopic cracks within the substrate or the loosening of screws that affects the crucial contact\nintegrity, can lead to a cascade of detrimental outcomes.",
+      "size": 487,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 23,
+      "content": "log data, have\nintroduced innovative strategies for early fault detection in the EWS processes [9]. AI techniques have further been\nextended to tasks such as PC lifetime prediction and optimization of replacement schedules [10], as well as differenti-\nating between defects caused by testing apparatus and those inherent to the fabrication process [11].",
+      "size": 353,
+      "sentences": 2,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 24,
+      "content": "ing between defects caused by testing apparatus and those inherent to the fabrication process [11]. In response to the shortcomings of traditional failure detection methods, Structural Health Monitoring (SHM) tech-\nniques have emerged as a promising alternative. By leveraging sensor data, such as measurements of vibrations, SHM\noffers the potential for continuous and non-intrusive monitoring of the operational health of probe cards.",
+      "size": 436,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 36,
+      "content": "nisms within DL\narchitectures to identify sensor locations that yield the highest diagnostic value. Our approach leverages simulation\ndata generated through ANSYS Mechanical R2 2024 [26], encompassing diverse failure scenarios. By analyzing\nattention scores produced by the network, we identify sensor conﬁgurations that maximize information gain while\nminimizing redundancy.",
+      "size": 375,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 77,
+      "content": "damage of the screws, and issues with the needles, such as bending-buckling,\ncracking, or burning. Based on the failure analysis and investigation into their root causes, the following major failure challenges were\nidentiﬁed, along with proposed sensor-based mitigation strategies: Based on the failure analysis and investigation into\ntheir root causes, the following major failure challenges were identiﬁed, along with proposed sensor-based mitigation\nstrategies:\n\n=== Page 6 ===\nTransformer-Based Approach to Optimal Sensor Placement\nA PREPRINT\na) Needle and Card Contamination: Contaminant buildup on needle tips can signiﬁcantly compromise contact\nresistance and signal ﬁdelity, ultimately reducing wafer test yield.",
+      "size": 720,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 78,
+      "content": "igniﬁcantly compromise contact\nresistance and signal ﬁdelity, ultimately reducing wafer test yield. Sources of contamination include residual\naluminum oxide from wafer pads, previous test residues, and ambient particulates. To address this issues, ac-\ncelerometers are deployed to monitor the cumulative number of touchdowns, enabling predictive and adaptive\ncleaning strategies and minimizing unplanned downtime through optimized maintenance scheduling.",
+      "size": 454,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 115,
+      "content": "ssures (1.0-2.0 MPa) simulating aggressive overtravel conditions for challenging contact\nscenarios. The distributed nature of the applied load represents a computational simpliﬁcation of the realistic\nloading scenario where the chuck pressure is transmitted through the wafer surface and the probes to the\nPH assembly. In the FE simulations of the PH, this pressure is applied as a distributed surface load on the\nlower plates of the PH assembly for computational efﬁciency.",
+      "size": 474,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 237,
+      "content": "23.\ndoi:10.1016/j.cie.2023.109547. [10] Y. T. Jou, H. M. Wee, H. C. Chen, Y. H. Hsieh, and L. Wang. A neural network forecasting model for consumable\nparts in semiconductor manufacturing. Journal of Manufacturing Technology Management, 20(3):404–412, 2009.\ndoi:10.1108/17410380910936828. [11] K. C. C. Cheng, C.-J. Su, T.-C. Chang, C.-J. Du, S. C. Hsieh, and Y.-F. Chen. Machine Learning-Based Detection\nMethod for Wafer Test Induced Defects.",
+      "size": 442,
+      "sentences": 8,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 238,
+      "content": ". C. Hsieh, and Y.-F. Chen. Machine Learning-Based Detection\nMethod for Wafer Test Induced Defects. IEEE Transactions on Semiconductor Manufacturing, 34(2):161–167,\n2021. doi:10.1109/TSM.2021.3065405. [12] M. S. A. Sulaiman, M. A. Yunus, A. R. Bahari, and M. N. Abdul Rani. Identiﬁcation of damage based\non frequency response function (FRF) data. In MATEC Web of Conferences, volume 90, page 01025, 2016.\ndoi:10.1051/matecconf/20179001025. [13] R. P. B. Kocharla, M. Kolli, and M. Cheepu.",
+      "size": 488,
+      "sentences": 8,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 250,
+      "content": "ion. Sensors, 23(20):8373, 2023. doi:10.3390/S23208373. [33] B. R. Chang, H. F. Tsai, and Y. R. Wu. Detection and Prediction of Probe Mark Damage in Wafer Testing. Electronics, 13(20):4075, 2024. doi:10.3390/electronics13204075. [34] G. Toh and J. Park. Review of Vibration-Based Structural Health Monitoring Using Deep Learning. Applied\nSciences, 10(5):1680, 2020. doi:10.3390/app10051680. [35] S. Hassani and U. Dackermann.",
+      "size": 425,
+      "sentences": 10,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 263,
+      "content": "truction Using Deep Learning. IEEE Access,\n12:100544–100558,\n2024.\ndoi:10.1109/ACCESS.2024.3425408. [53] M. Bejani, D. Appello, M. Mauri, E. Missaglia, and S. Mariani. Digital Twin-Assisted Optimal Sensor Place-\nment for Real-Time Monitoring of Probe Cards in EWS Applications. In 2025 26th International Conference\non Thermal, Mechanical and Multi-Physics Simulation and Experiments in Microelectronics and Microsystems\n(EuroSimE), pages 1–6, 2025. doi:10.1109/EUROSIME65125.2025.11006625.",
+      "size": 490,
+      "sentences": 5,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 265,
+      "content": "nhancing Time Series Product Demand Fore-\ncasting With Hybrid Attention-Based Deep Learning Models. IEEE Access, 12:190079–190091, 2024.\ndoi:10.1109/ACCESS.2024.3516697. [56] L. Rosafalco, A. Manzoni, S. Mariani, and A. Corigliano. Fully convolutional networks for structural health\nmonitoring through multivariate time series classiﬁcation. Advanced Modeling and Simulation in Engineering\nSciences, 7(1):38, 2020. doi:10.1186/s40323-020-00174-1.",
+      "size": 446,
+      "sentences": 5,
+      "keyword_count": 2,
+      "is_relevant": true
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "source": "ArXiv",
+  "filename": "005_VirtualFab_3D Magnetic Inverse Routine for Single-S.pdf",
+  "domain": "VirtualFab",
+  "total_chars": 21238,
+  "total_chunks": 5,
+  "chunks": [
+    {
+      "id": 2,
+      "content": "covering 3D infor-\nmation is crucial for non-destructive testing (NDT) to localize\ncircuit defects. This paper presents a novel approach called\nthe 3D Magnetic Inverse Routine (3D MIR), which leverages\nMagnetic Field Images (MFI) to retrieve the parameters for\nthe 3D current flow of a single-segment. The 3D MIR inte-\ngrates a deep learning (DL)-based Convolutional Neural Net-\nwork (CNN), spatial-physics-based constraints, and optimiza-\ntion techniques.",
+      "size": 456,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 6,
+      "content": "highlights the potential of combining DL and\nphysics-driven optimization in practical applications. Index Terms— Magnetic field images, non-destructive\ntesting, deep learning, convolutional neural network, opti-\nmization\n1. INTRODUCTION\nThe development of three-dimensional (3D) packaging in\nsemiconductor manufacturing is crucial for advanced com-\nputer technology.",
+      "size": 366,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 19,
+      "content": "ers\n(xo, yo, zo, ℓ, I) to minimize the difference between\nthe reconstructed MFI and the actual MFI. We conducted extensive simulations to evaluate the proposed\n3D MIR using single-segment magnetic images. The results\ndemonstrate the method’s effectiveness in reconstructing\nmagnetic images, with the CNN providing initial estimates\nfollowed by parameter optimization. 2.",
+      "size": 370,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 48,
+      "content": "ned CNN model is applied to 500 test\nmagnetic images with varying wire lengths, from short to\nlong. The parameter optimization yielded successful results\nthrough both quantitative and qualitative analysis in all cases. The integration of DL for extracting 3D information from\nmagnetic images presents a novel approach to semiconductor\npackaging. Although this study focuses on a single-segment,\nthere is potential for expanding the method to include multi-\nple segments in future directions.",
+      "size": 491,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 58,
+      "content": "ral Support for Programming Languages\nand Operating Systems, Volume 2 (ASPLOS ’24). Apr. 2024, ACM. [10] Pauli Virtanen, Ralf Gommers, Travis E. Oliphant, Matt\nHaberland, Tyler Reddy, David Cournapeau, Evgeni\nBurovski, Pearu Peterson, Warren Weckesser, Jonathan\nBright, St´\nefan J. van der Walt, Matthew Brett, Joshua\nWilson, K. Jarrod Millman, Nikolay Mayorov, Andrew\nR. J. Nelson, Eric Jones, Robert Kern, Eric Larson, C J\nCarey, ˙\nIlhan Polat, Yu Feng, Eric W. Moore, Jake Van-\nderPlas, Denis Laxalde, Josef Perktold, Robert Cimr-\nman, Ian Henriksen, E. A. Quintero, Charles R. Har-\nris, Anne M. Archibald, Antˆ\nonio H. Ribeiro, Fabian Pe-\ndregosa, Paul van Mulbregt, and SciPy 1.0 Contribu-\ntors, “SciPy 1.0: Fundamental Algorithms for Scientific\nComputing in Python,” Nature Methods, vol.",
+      "size": 793,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    }
+  ]
+}

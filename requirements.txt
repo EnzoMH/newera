@@ -30,3 +30,7 @@ scikit-learn==1.5.2
 numpy==1.26.4
 pandas==2.2.3
 
+# 하이브리드 Agentic Chunking
+llama-cpp-python==0.2.90  # 로컬 LLM (CPU/GPU)
+google-generativeai==0.8.3  # Gemini API
+

@@ -1,0 +1,57 @@
+{
+  "source": "ArXiv",
+  "filename": "011_VirtualFab_Andreev Reflection in the Quantum Hall R.pdf",
+  "domain": "VirtualFab",
+  "total_chars": 38636,
+  "total_chunks": 6,
+  "chunks": [
+    {
+      "id": 15,
+      "content": "ents with a controlled setup to understand even the\nmost fundamental process of Andreev conversion. Common to the reported superconducting junctions in the\nQH regime [10–14, 16, 18–21, 31–33] is that they use type-\nII superconductors to sustain superconductivity at high ﬁelds\nand etching to fabricate the junction, both of which make it\nchallenging to form a pristine and uniform junction free of\ninterfacial disorder or in-gap states.",
+      "size": 436,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 23,
+      "content": "is directly\nedge-contacted by the superconductor, with no spatial overlap\nalong the ﬁeld direction. The observation of Andreev con-\nversion with a clear bias dependence in the unique geometry\nprovides new insights into the underlying processes. In addi-\ntion, our approach to fabricating etch-free, high-quality super-\nconducting junctions will open a new avenue for the study of\nengineered topological superconductivity.",
+      "size": 421,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 24,
+      "content": "ducting junctions will open a new avenue for the study of\nengineered topological superconductivity. Our CEO device was fabricated from a heterostructure\nwafer grown on a GaSb(001) substrate. (See Supporting In-\nformation (SI) for the layer structure.) The wafer, cut into a\n14 mm ×15 mm piece, was thinned to 300 µm by polishing\nto facilitate cleaving and thus obtain a ﬂat cleaved edge sur-\nface.",
+      "size": 397,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 25,
+      "content": "thinned to 300 µm by polishing\nto facilitate cleaving and thus obtain a ﬂat cleaved edge sur-\nface. The wafer was mounted at 90◦on a Mo sample holder\nand was cleaved in UHV (< 5.0 × 10−10 mbar) using a wob-\nble stick. The wafer was then transferred under UHV to the\ndeposition chamber, where a superconducting electrode was\ndeposited on the cleaved edge surface, with the sample holder\ncooled by direct contact with a liquid nitrogen cold plate, a\ncrucial step for obtaining epitaxial Al layers [35].",
+      "size": 500,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 26,
+      "content": "t contact with a liquid nitrogen cold plate, a\ncrucial step for obtaining epitaxial Al layers [35]. We used\nphotolithography to process the sample into a gate-deﬁned\nHall bar with normal Ti/Au electrodes and an S/Sm junction\nat the cleaved edge. (See SI for fabrication details.) Mea-\nsurements were conducted in a 3He cryostat equipped with a\nsuperconducting vector magnet. The 2DES density and mo-\nbility are n = 3.0×1015m−2 and µ = 63 m2/Vs, respectively.",
+      "size": 458,
+      "sentences": 5,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 111,
+      "content": "ity\neffect\nin aluminum-based superconductor-semiconductor hybrids,”\nAdv. Mater. 34, 2202034 (2022). [44] L. Pfeiffer, H. L. St¨\normer, K. W. Baldwin, K. W. West,\nA. R. Go˜\nni, A. Pinczuk, R. C. Ashoori, M. M. Dignam, and\nW. Wegscheider, “Cleaved edge overgrowth for quantum wire\nfabrication,” J. Cryst. Growth 127, 849–857 (1993). [45] This prevents non-topological edge conduction in the QH\nregime caused by electron accumulation at the edge, which can\noccur in etch-deﬁned InAs channels [64–66].",
+      "size": 497,
+      "sentences": 6,
+      "keyword_count": 3,
+      "is_relevant": true
+    }
+  ]
+}

@@ -10,7 +10,7 @@ MONGODB_COLLECTION: str = os.getenv("MONGODB_COLLECTION", "documents")
 GOOGLE_API_KEY: str = os.getenv("GOOGLE_API_KEY", "")
 GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-1.5-pro")
 
-EMBEDDING_MODEL: str = os.getenv("EMBEDDING_MODEL", "BAAI/bge-large-en-v1.5")
+EMBEDDING_MODEL: str = os.getenv("EMBEDDING_MODEL", "BAAI/bge-m3")
 
 FAISS_INDEX_PATH: str = os.getenv("FAISS_INDEX_PATH", "data/vectordb/faiss.index")
 

@@ -1,0 +1,201 @@
+{
+  "source": "ArXiv",
+  "filename": "013_VirtualFab_Nanomolecular OLED Pixelization Enabling.pdf",
+  "domain": "VirtualFab",
+  "total_chars": 43319,
+  "total_chunks": 24,
+  "chunks": [
+    {
+      "id": 3,
+      "content": "eality \ndisplays1,2 \nand \non-chip \nlight \nsources \nfor \nultra-broadband \nchiplet \ncommunication3,4. However, unlike silicon scaling in electronic integrated circuits5, patterning \nof inorganic III-V semiconductors in LEDs considerably compromises device efficiencies at \nsubmicrometer scales6–12. Here, we present the scalable fabrication of nanoscale organic \nLEDs (nano-OLEDs), with the highest array density (>84,000 pixels per inch) and the smallest \npixel size (~100 nm) ever reported to date.",
+      "size": 498,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 4,
+      "content": "ray density (>84,000 pixels per inch) and the smallest \npixel size (~100 nm) ever reported to date. Direct nanomolecular patterning of organic \nsemiconductors is realized by self-aligned evaporation through nanoapertures fabricated on a \nfree-standing silicon nitride film adhering to the substrate. The average external quantum \nefficiencies (EQEs) extracted from a nano-OLED device of more than 4 megapixels reach up \nto 10%.",
+      "size": 427,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 9,
+      "content": "22, respectively. The inorganic III-V LED technology \nhas been considered as a promising candidate. However, inorganic LEDs suffer from size-\ndependent EQE reduction, considerably compromising the electroluminescence (EL) \nefficiencies given the drastically increased non-radiative recombination defects induced during \nthe semiconductor patterning process6–12.",
+      "size": 361,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 10,
+      "content": "eased non-radiative recombination defects induced during \nthe semiconductor patterning process6–12. In this regard, a long-overlooked advantage of using organic emitting materials is the fact that \nthe emission comes from Frenkel excitons highly localized within individual molecules in \namorphous films23, making OLED technology fundamentally in favor of miniaturization24.",
+      "size": 374,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 11,
+      "content": "olecules in \namorphous films23, making OLED technology fundamentally in favor of miniaturization24. However, despite their prevalent application in large-area displays25–27, the fabrication of small \nOLED pixels remains challenging, due to the incompatibility of organic materials with standard \nmicrofabrication processes based on photolithography23.",
+      "size": 351,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 12,
+      "content": "ibility of organic materials with standard \nmicrofabrication processes based on photolithography23. For commercial OLED displays, \npatterning of organic semiconductors relies on the direct evaporation of organic molecules \nthrough the fine metal mask manufactured from Invar foil, which fails to achieve \nsubmicrometer resolution because of the large thickness of the mask. Aimed at the broad applications of miniaturized LEDs, nanoscale patterning of organic \nsemiconductors is indispensable.",
+      "size": 493,
+      "sentences": 3,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 13,
+      "content": "pplications of miniaturized LEDs, nanoscale patterning of organic \nsemiconductors is indispensable. Here we present the scalable fabrication of nano-OLED \npixels that achieves an array density of over 84,000 pixels per inch (ppi) and an individual \npixel size of approximately 100 nm. Direct nanopatterning of solvent-sensitive organic \nemissive layer (EML) is realized through self-aligned nanostencil lithography.",
+      "size": 415,
+      "sentences": 3,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 16,
+      "content": "ed to finely control the substrate-to-\nstencil gap, thus ensuring high yield and reproducibility31. In order to achieve the smallest OLED pixel size and spacing, nanostencil fabrication starts \nwith the deposition of ultrathin (50 nm) silicon nitride (SiNx) film grown on a silicon wafer \nemploying low-pressure chemical vapor deposition (LPCVD). Nanoapertures in the SiNx film \nwere patterned by electron-beam lithography, followed by selective reactive ion etching (RIE).",
+      "size": 473,
+      "sentences": 3,
+      "keyword_count": 7,
+      "is_relevant": true
+    },
+    {
+      "id": 17,
+      "content": "ilm \nwere patterned by electron-beam lithography, followed by selective reactive ion etching (RIE). The SiNx membrane was then released from the supporting substrate by a combination of dry \nand wet deep silicon etching. Details can be found in Methods and Supplementary Fig. S1. Figure 1a presents a 4-inch wafer containing 52 chips, where each chip has 36 freestanding \nwindows comprised of nanostencil masks with different patterns.",
+      "size": 435,
+      "sentences": 5,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 24,
+      "content": "f shows the self-aligned overlay of the organic \nemitter patterns and the insulating PMMA barrier. The optimized protocol for EML nanopatterning was incorporated in the fabrication of bottom-\nemitting nano-OLEDs on glass substrates based on the device architecture of ITO / \nPEDOT:PSS / TAPC / Ir(ppy)3:CBP / B3PyMPM / Liq / Al (for full names of all materials see \nMethods). TAPC and B3PyMPM are the hole and electron transport layers (HTL and ETL), \nrespectively.",
+      "size": 465,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 25,
+      "content": "Methods). TAPC and B3PyMPM are the hole and electron transport layers (HTL and ETL), \nrespectively. Our benchmark device involves sequential deposition of HTL and EML through \nthe stencil chip onto ITO anode, followed by detaching the stencil chip prior to the evaporation \nof ETL, electron injection layer (EIL), and cathode (a schematic of the fabrication procedure is \ndisplayed in Extended Data Fig. 1a).",
+      "size": 408,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 28,
+      "content": "roscope (TEM) image and \nenergy-dispersive X-ray spectroscopy (EDS) map see Extended Data Fig. 3c). In \nConfiguration B, an insulating PMMA barrier layer was inserted between HIL and ETL, which \nwas patterned by oxygen plasma etching through the stencil chip before HTL/EML deposition, \nyielding self-aligned nano-OLED pixels surrounded by insulating barriers (top-view SEM \nimage in Fig. 1f and additional information in Extended Data Fig. 2).",
+      "size": 444,
+      "sentences": 5,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 36,
+      "content": "ibution of the RADAK® source lowers the yield over a large area, compromising the peak \nEQE (5.2%). In Configuration A, The peak EQE reaches 9.6% at 2.6 V; all EQE values are \nconsistently above 1% throughout the voltage range considered here. We attribute the high \nefficiencies to the bottom-up nanopatterning of organic semiconductors which does not induce \nstructural defects.",
+      "size": 380,
+      "sentences": 3,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 37,
+      "content": "o the bottom-up nanopatterning of organic semiconductors which does not induce \nstructural defects. The nanoscale patterning of organic semiconductors enables unprecedentedly small \ndimensions of LED pixel size (< 𝜆/4) and periodicity (< 𝜆/2) at visible frequencies. The access \nto subwavelength scales shifts the LED operating regime to that of wave optics allowing the \nOLED pixels to act as meta-atoms for the first realization of electroluminescent organic \nmetasurfaces.",
+      "size": 475,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 72,
+      "content": "in the periodicity of 1D nano-OLEDs can \nreverse the polarization of far-field electroluminescence. In summary, we have demonstrated scalable fabrication of nano-OLEDs with pixel size and \nperiodicity smaller than the diffraction limit of visible light without compromising device \nefficiency. Direct nanopatterning of emissive organic semiconductors gives rise to the \nelectroluminescent metasurfaces that convert electricity to modulated light with controlled \ndirectionality and polarization.",
+      "size": 495,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 84,
+      "content": "ouiti Ootuka, Y. O. A New Fabrication \nMethod for Ultra Small Tunnel Junctions. Jpn. J. Appl. Phys. 35, 2369 (1996). 29. Deshmukh, M. M., Ralph, D. C., Thomas, M. & Silcox, J. Nanofabrication using a \nstencil mask. Appl. Phys. Lett. 75, 1631–1633 (1999). 30. Brugger, J. et al. Resistless patterning of sub-micron structures by evaporation \nthrough nanostencils. Microelectron. Eng. 53, 403–405 (2000). 31.",
+      "size": 406,
+      "sentences": 19,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 85,
+      "content": "micron structures by evaporation \nthrough nanostencils. Microelectron. Eng. 53, 403–405 (2000). 31. Vazquez-Mena, O., Gross, L., Xie, S., Villanueva, L. G. & Brugger, J. Resistless \nnanofabrication by stencil lithography: A review. Microelectron. Eng. 132, 236–254 \n(2015). === Page 13 ===\n13 \n \n32. Lieb, M. A., Zavislan, J. M. & Novotny, L. Single-molecule orientations determined by \ndirect emission pattern imaging. J. Opt. Soc. Am. B 21, 1210 (2004). 33.",
+      "size": 459,
+      "sentences": 16,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 91,
+      "content": "nd Far-Field Radiation. Nano Lett. 18, 6906–6914 (2018). === Page 14 ===\n14 \n \n43. Monin, H. et al. Controlling light emission by a thermalized ensemble of colloidal \nquantum dots with a metasurface. Opt. Express 31, 4851 (2023). METHODS \nNanostencil fabrication \nA double-side polished 300 µm-thick 4-inch Si wafer was used as a substrate (Fig S1a). A \nuniform layer of low-stress SiNx (thickness 50nm) was deposited (Fig S1b) using LPCVD \n(PEO-604, ATV Technologies GmbH).",
+      "size": 474,
+      "sentences": 10,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 93,
+      "content": "er and DI water as stopper. After development, the substrate is soft baked for 2 minutes at 130 °C. Using e-beam resist \nas mask, SiNx is dry etched (Fig S1d) in a RIE chamber (PlasmaPro 80 RIE, Oxford \nInstruments). Anisol was used as a solvent for e-beam resist strip. Photolithography was used to define substrate back-side opening area (Fig S1e).",
+      "size": 350,
+      "sentences": 5,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 94,
+      "content": "-beam resist strip. Photolithography was used to define substrate back-side opening area (Fig S1e). After coating \na photoresist (AZ® 10XT 520CP, Microchemicals GmbH), PR exposure was done by back-\nside alignment with a premade photomask using a mask aligner (EVG®620 NT, EV Group). PR development was done using AZ® 400K 1:4 (Microchemicals GmbH) as a developer and \nDI water as stopper. Development was followed by a hard bake of 10 minutes at 115 °C.",
+      "size": 453,
+      "sentences": 5,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 95,
+      "content": "eveloper and \nDI water as stopper. Development was followed by a hard bake of 10 minutes at 115 °C. Before the back-side silicon etching, SiNx membrane on the back side was etched using RIE \n(Fig S1f). Bosch process is used for deep silicon etching in a Si DRIE chamber (Omega® Rapier, SPTS). PR was used as a mask. About 260 out of 300 µm of the Si wafer was etched using DRIE. Remaining silicon wafer was etched using KOH wet etching. The wet etching was done in a \nwater bath at 80 °C (Fig S1g).",
+      "size": 498,
+      "sentences": 8,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 96,
+      "content": "fer was etched using KOH wet etching. The wet etching was done in a \nwater bath at 80 °C (Fig S1g). Device fabrication \nFollowing materials were used for device fabrication : indium tin oxide (ITO), Poly(3,4-\nethylenedioxythiophene)-poly(styrenesulfonate) (PEDOT:PSS), Poly(methyl methacrylate) \n(PMMA), \nDi-[4-(N,N-di-p-tolyl-amino)-phenyl]cyclohexane \n(TAPC), \nTris(2-\nphenylpyridine)iridium(III) (Ir(ppy)3), 4,4’-Bis(N-carbazolyl)-1,1’-biphenyl (CBP), 4,6-Bis(3,5-\ndi(pyridin-3-yl)phenyl)-2-methylpyrimidine, \n4,6-Bis(3,5-di-3-pyridinylphenyl)-2-\nmethylpyrimidine (B3PymPm), 8-Hydroxyquinolinolato-lithium (Liq), and aluminium (Al).",
+      "size": 635,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 118,
+      "content": "ctron microscopy facilities at the Scientific Center for Optical and \nElectron Microscopy (ScopeM). AUTHOR CONTRIBUTIONS \nT.M., J.O., S.Z., and C.J.S. conceived the idea and designed the experiments. T.M. built the \nFourier microscope and performed optical simulations under advice from Z.L. T.M. carried out \noptical and EL characterization. S.Z. established protocols for the fabrication of nanostencils. T.M. established protocols for the fabrication of nano-OLED devices. J.O.",
+      "size": 480,
+      "sentences": 12,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 121,
+      "content": "tion a, Schematic diagram illustrating the \nfabrication process for the bottom-emitting Nano-OLEDs. The additional pathway following the \nred arrows leads from Configuration A to B. b, Representative SEM and AFM images for some \nof the densest Ir(ppy)3:CBP nanopixel arrays and the corresponding nanostencils used for \ntheir deposition. From top to bottom: 2D square and hexagonal arrays of 100 nm nanodisks \n1D linear array of 0.1 µm x 4 µm nanorods with a periodicity of 300 nm.",
+      "size": 480,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    }
+  ]
+}
