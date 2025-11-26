@@ -1,0 +1,81 @@
+{
+  "source": "ArXiv",
+  "filename": "014_VirtualFab_Transfer-printed multiple Ge$_{0.89}$Sn$.pdf",
+  "domain": "VirtualFab",
+  "total_chars": 43041,
+  "total_chunks": 9,
+  "chunks": [
+    {
+      "id": 21,
+      "content": "d by the discussion of the influence of chemical treatment and\nannealing on device characteristics. Results and discussion\nGrowth and characterization of GeSn epilayers\nThe Ge0.89Sn0.11 alloy growth was carried out in a low-pressure chemical vapor deposition\n(CVD) reactor on a 4-inch Si (100) wafer.",
+      "size": 300,
+      "sentences": 2,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 22,
+      "content": "s carried out in a low-pressure chemical vapor deposition\n(CVD) reactor on a 4-inch Si (100) wafer. First, a 1.02 µm-thick Ge virtual substrate (Ge-\n4\n\n=== Page 5 ===\nVS) was grown using 10% monogermane (GeH4) and a continuous flow of pure hydrogen\nfollowing a two-temperature growth protocol at 460 ◦C and 600 ◦C. In addition to reducing\nthe lattice mismatch between the Si substrate and GeSn, Ge-VS also acts as a sacrificial\nlayer, facilitating the GeSn membranes underetching and release.",
+      "size": 492,
+      "sentences": 3,
+      "keyword_count": 4,
+      "is_relevant": true
+    },
+    {
+      "id": 33,
+      "content": "n the absorption wavelength cutoff is\nobserved as the band energy shrinks due to strain relaxation. GeSn membrane fabrication and transfer printing\nThe fabrication of Ge0.89Sn0.11 membranes starts with a standard photolithography of\nthe as-grown sample to pattern an array of 20 µm × 20 µm squares with a pitch of 200 µm\n× 400 µm, as shown in Fig. 2(a).",
+      "size": 353,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 43,
+      "content": "ty (a.u.) Wavelength (µm)\n(a)\n(b)\n(c)\n(d)\nGeSn\nGe-VS\nSi\n1. As-grown sample\n2. Etching of GeSn/Ge\n3. Selective etching of Ge\nOptical microscope\nSEM (tilted view)\nSi\nGeSn membrane\nGeSn membrane\n50 µm\n10 µm\nMembrane\n-1\n292.1 cm\nMembrane\nAs-grown\n-1\n294.3 cm\nAs-grown\nFigure 2: Membrane fabrication. (a) Illustration of the Ge0.89Sn0.11 membrane fabrication\nsteps. (b) Optical microscope image and SEM micrograph of a released Ge0.89Sn0.11 mem-\nbrane.",
+      "size": 447,
+      "sentences": 7,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 48,
+      "content": "are utilized since the adhesive layer (SU-8) can be easily removed during a metal\nlift-off process. This technique is versatile and can be employed with various substrates\nwithout subjecting them to potentially damaging process conditions. A transferable array of\nmetal contacts with a 5 µm contact separation gap is patterned in a photoresist layer coated\non a separate SiO2/Si substrate using photolithography.",
+      "size": 412,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 49,
+      "content": "is patterned in a photoresist layer coated\non a separate SiO2/Si substrate using photolithography. Subsequently, a 200 nm-thick Au\nlayer is deposited via electron beam evaporation followed by a lift-off process (Fig. 3(a), step\n1.1). The substrate with the Au contacts is then coated with a polycarbonate layer (Fig. 3(a), step 1.2) to facilitate the mechanical exfoliation of the contacts (Fig. 3(a), step 1.3)\nand enhance their adherence to the PDMS stamp (Fig. 3(a), step 1.4).",
+      "size": 480,
+      "sentences": 7,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 81,
+      "content": "rs were developed and characterized show-\ning room-temperature operation in the mid-infrared range. The control of Sn content and\nlattice strain throughout the epitaxial growth yielded highly relaxed alloys leading to released\nmembranes without any significant structural bowing, thus facilitating the large-scale trans-\nfer of membrane detector arrays. Indeed, the fabrication process based on transfer printing\nwas improved by using an SU-8 adhesive layer and transferable gold contacts.",
+      "size": 489,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 85,
+      "content": "from compatibility with silicon, which\nis vital for the development of large-scale MWIR components. Acknowledgments\nThe authors thank J. Bouchard for the technical support with the CVD system and the\nMicrofabrication Laboratory (LMF) for the support with the microfabrication steps. O.M.",
+      "size": 287,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 126,
+      "content": "iative carrier\nlifetime in Ge1−xSnx midinfrared emitters. Physical Review Applied 2023, 20, 064001. 22\n\n=== Page 23 ===\n(56) Gupta, S.; Chen, R.; Huang, Y.-C.; Kim, Y.; Sanchez, E.; Harris, J. S.; Saraswat, K. C.\nHighly Selective Dry Etching of Germanium over Germanium–Tin (Ge1−x Snx): A\nNovel Route for Ge1−x Snx Nanostructure Fabrication. Nano Letters 2013, 13, 3783–\n3790.",
+      "size": 376,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    }
+  ]
+}

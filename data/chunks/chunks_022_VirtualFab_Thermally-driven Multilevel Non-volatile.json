@@ -1,0 +1,57 @@
+{
+  "source": "ArXiv",
+  "filename": "022_VirtualFab_Thermally-driven Multilevel Non-volatile.pdf",
+  "domain": "VirtualFab",
+  "total_chars": 68554,
+  "total_chunks": 6,
+  "chunks": [
+    {
+      "id": 13,
+      "content": "functionalities that confer the possibility of robust device architecture with higher throughput. Furthermore, with the growing packing density of FET arrays on a single wafer, high \nperformance integrated circuits (ICs) can reach an operating temperature as high as 500K,24 \nmaking it essential to understand and exploit novel properties of 2D materials based devices at \nhigh temperatures.",
+      "size": 391,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 19,
+      "content": "for building multilevel memory and synapse arrays, facilitating complex data processing tasks. 2. Results and Discussion \nMonolayer (ML) MoS2 (triangular domains of size ~30 𝜇m) are directly synthesized on \nSiO2(285 nm)/Si substrate by using the salt-assisted chemical vapor deposition (CVD) \ntechnique (see the Methods section for more details).25 Figure 1(a) displays the prominent \nRaman active modes i.e. E2g and A1g of as-grown MoS2.",
+      "size": 438,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 21,
+      "content": "(∆𝜔= 19 \ncm-1) between these phonon modes are characteristic signature of ML nature of our sample. The Lorentz fit results provide the FWHM of E2g  (~2.5 cm-1) and A1g (~5.2 cm-1) modes \ncomparable to that of exfoliated MoS2 which depict high crystallinity of our CVD grown \nsamples.26 Figure 1(b) displays the optical micrograph of as-fabricated MoS2 devices with \nsilver (Ag) as drain/source electrodes.",
+      "size": 405,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 32,
+      "content": "Lorentz fit \nresults (solid red lines) provide the high crystallinity of CVD grown ML MoS2 sample. (b) \nOptical image of the MoS2 device having equal channel widths (10 𝜇m) and length varies from \n1 𝜇m to 4 𝜇m, Ag is being used as source/drain electrodes (shown in false color). (c) \nPhotoluminescence mapping confirms the uniform optical grade quality of the MoS2 sample \nwith robust device fabrication.",
+      "size": 404,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 153,
+      "content": "sor and growth substrate is minimized \nto 3 mm to channelize the sulfur feeding during growth time. Device Fabrication: The monolayer MoS2 based mem-transistors are fabricated by using a \nphotolithography (Heidelberg μPG 101) system. Initially, the salt-assisted CVD grown MoS2 \nsamples on SiO2/Si substrate are coated with a positive photoresist (ma-p-1205) by a spin \ncoater (SUSS Microtech) and then baked at 80 °C for 1 min.",
+      "size": 428,
+      "sentences": 3,
+      "keyword_count": 4,
+      "is_relevant": true
+    },
+    {
+      "id": 154,
+      "content": "itive photoresist (ma-p-1205) by a spin \ncoater (SUSS Microtech) and then baked at 80 °C for 1 min. Under the inspection of a high-\nresolution microscope, the contact patterns of several channel lengths are exposed on the \nmonolayer MoS2 flakes with a 405 nm laser in photolithography. The exposed patterns are \n\n=== Page 26 ===\n26 \n \ndeveloped with an alkaline solution (1:4, NaOH:DI water) for 1 min.",
+      "size": 402,
+      "sentences": 3,
+      "keyword_count": 3,
+      "is_relevant": true
+    }
+  ]
+}

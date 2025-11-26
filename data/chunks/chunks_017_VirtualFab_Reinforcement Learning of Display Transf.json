@@ -1,0 +1,377 @@
+{
+  "source": "ArXiv",
+  "filename": "017_VirtualFab_Reinforcement Learning of Display Transf.pdf",
+  "domain": "VirtualFab",
+  "total_chars": 43688,
+  "total_chunks": 46,
+  "chunks": [
+    {
+      "id": 1,
+      "content": "=== Page 1 ===\nReinforcement Learning of Display Transfer Robots\nin Glass Flow Control Systems:\nA Physical Simulation-Based Approach\nHwajong Lee, Chan Kim, and Seong-Woo Kim, Member, IEEE\nAbstract—A flow control system is a critical concept for\nincreasing the production capacity of manufacturing systems. To solve the scheduling optimization problem related to the\nflow control with the aim of improving productivity, existing\nmethods depend on a heuristic design by domain human experts.",
+      "size": 489,
+      "sentences": 2,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 3,
+      "content": ", the monitoring time increases, which decreases the\nprobability of arriving at the optimal design. As an alternative\napproach to the heuristic design of flow control systems, the use of\ndeep reinforcement learning to solve the scheduling optimization\nproblem has been considered.",
+      "size": 280,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 4,
+      "content": "se of\ndeep reinforcement learning to solve the scheduling optimization\nproblem has been considered. Although the existing research on\nreinforcement learning has yielded excellent performance in some\nareas, the applicability of the results to actual FAB such as display\nand semiconductor manufacturing processes is not evident so\nfar.",
+      "size": 333,
+      "sentences": 2,
+      "keyword_count": 4,
+      "is_relevant": true
+    },
+    {
+      "id": 5,
+      "content": "ults to actual FAB such as display\nand semiconductor manufacturing processes is not evident so\nfar. To this end, we propose a method to implement a physical\nsimulation environment and devise a feasible flow control system\ndesign using a transfer robot in display manufacturing through\nreinforcement learning.",
+      "size": 308,
+      "sentences": 2,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 9,
+      "content": "provided, which includes reward\ndesign, sensor installation and applicability to actual processes. Index Terms—Digital twin, display manufacturing, flow control\nsystem, glass, OLED, reinforcement learning, transfer robot. I. INTRODUCTION\nThe global display market continues to expand owing to\nthe proliferation of smartphones, TVs, smartwatches, tablets,\nand laptops. While fulfilling various market demands and\nconditions, the display industry is focusing on improving pro-\nductivity.",
+      "size": 485,
+      "sentences": 5,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 12,
+      "content": "ineering Practice, Seoul\nNational University, Seoul, Republic of Korea, 08826, snwoo@snu.ac.kr\nFig. 1. Simulation environment configuration. the productivity of existing mass production lines. Such efforts\nhave yielded the flow control system, which is closely related\nto productivity.",
+      "size": 285,
+      "sentences": 5,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 13,
+      "content": "lines. Such efforts\nhave yielded the flow control system, which is closely related\nto productivity. For example, in display manufacturing fabri-\ncation units (FAB), facilities for various purposes such as pro-\ncess, inspection, and measurement are arranged, and glass is\nconveyed between these chambers according to predetermined\nconditions, as shown in Fig. 1. Modern display production\ninvolves numerous processes, which increases the complexity\nof the flow control system.",
+      "size": 475,
+      "sentences": 5,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 18,
+      "content": "conditions. The time interval between processes\nchanges continuously depending on these variables. In the\ndesign of a flow control system, the environment should reflect\narXiv:2310.07981v1  [cs.LG]  12 Oct 2023\n\n=== Page 2 ===\nMethod\n(a) Rule-based heuristic\n(b) Numerical analysis\n(Machine Learning)\n(c) Physical simulation and\nReinforcement Learning\nProcess\nTime and Cost\nHigh\nLow\nLow\nApplicability\nGood\nBad\nGood\nUse of equipment\nNecessary\nUnnecessary\nUnnecessary\nFAB\nTrial \n& \nError\nFAB\nPhysical \nsimulator\nPolicy \ntraining\nFAB\nNumerical \nanalysis\nMachine \nlearning\nFig.",
+      "size": 573,
+      "sentences": 3,
+      "keyword_count": 4,
+      "is_relevant": true
+    },
+    {
+      "id": 20,
+      "content": "that reflects the physical and process parameters\nof a manufacturing environment, as shown in Fig. 1, and then\nperform reinforcement learning to improve the performance\nof the flow control system. In the method, we consider the\nflow control system environment of a FAB unit process, the\nenvironment of which is configured using a physical simulator. At the process entrance, glass is input at regular time\nintervals, where this glass is transferred to the target point\nafter a set of processes.",
+      "size": 494,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 22,
+      "content": "er robot. The simulated environment is\ncharacterized by physical parameters and process parameters. Based on the virtual FAB environment, policy learning is\nperformed to improve the performance of the flow control\nsystem performance for the OLED display manufacturing\nprocess. To the best of our knowledge, there is no prior\nresearch on the reinforcement learning of glass flow control\nsystems using display transport robots in a digital twin manner.",
+      "size": 450,
+      "sentences": 4,
+      "keyword_count": 4,
+      "is_relevant": true
+    },
+    {
+      "id": 23,
+      "content": "ent learning of glass flow control\nsystems using display transport robots in a digital twin manner. The main contributions of this paper are as follows:\n• We present a modeling framework and approach to build\na virtual FAB environment for optimal scheduling of a\ndisplay transfer robot in flow control. • We present a training method to obtain an optimal control\npolicy on the virtual system using reinforcement learning\nframeworks for display manufacturing process.",
+      "size": 466,
+      "sentences": 3,
+      "keyword_count": 4,
+      "is_relevant": true
+    },
+    {
+      "id": 24,
+      "content": "cy on the virtual system using reinforcement learning\nframeworks for display manufacturing process. • We share the practical issues to reduce the gap between\nactual policy and learned policy from virtual environ-\nments, which includes how to design appropriate rewards\nand metrics, what sensors and where to install. It is too tedious and tricky to find a working policy of\nlearning-based robot control in a digital twin manner that\nconsider physical parameters.",
+      "size": 462,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 41,
+      "content": "rangements, are commonly used. A lack of proper scheduling\nleads to defects or reduced production. Currently, most display\nmanufacturing sites use the heuristic rule-based return logic. Each process chamber sends an individual in-out signal, and\nthe transfer robot executes the fastest signal that satisfies the\nprocess sequence and conditions. B. Reinforcement learning for flow control system\nMany researchers have attempted to study reinforcement\nlearning with the aim of optimizing scheduling.",
+      "size": 497,
+      "sentences": 5,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 47,
+      "content": "for\nnumerical analysis without using environmental information\nof the actual manufacturing process. C. Virtual environments in manufacturing\nIn simulation methods, it is essential to implement a sophis-\nticated virtual environment that minimizes the gap between\nactual target environment and virtual environment to obtain\noptimal policy, which can be categorized as a digital twin\nsystem [11], [12].",
+      "size": 399,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 49,
+      "content": "arning to real-world problems due to such unavailability of\nthe corresponding virtual environments. In previous studies based on simulation techniques, Dayhoff\nand Atherton introduced a simulation model of the FAB\nprocess and used various simulation models to analyze system\nperformance [16]. In another study [17], the same authors used\nsignal analysis techniques to describe the characteristics of\nsemiconductor wafer processing and test the effects of various\nwork assignment rules.",
+      "size": 485,
+      "sentences": 3,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 50,
+      "content": "cteristics of\nsemiconductor wafer processing and test the effects of various\nwork assignment rules. To determine the yield of wafers\nentering the FAB process, the performance of the system was\ntested using simulation model data. Sakr et al. proposed a reinforcement-learning-based appli-\ncation for dispatch and resource allocation in semiconductor\nmanufacturing [18]. This application is based on a discrete\nevent simulation model of a real semiconductor manufacturing\nsystem.",
+      "size": 477,
+      "sentences": 5,
+      "keyword_count": 4,
+      "is_relevant": true
+    },
+    {
+      "id": 51,
+      "content": "ication is based on a discrete\nevent simulation model of a real semiconductor manufacturing\nsystem. It simulates various aspects of processing that are\ncommonly present in complex systems. The agent in the model\nuses Deep-Q-Network and simultaneously learns through\nmodel execution. Hildebrand et al. presented a learning-\nbased method for a robot batching process by building virtual\nenvironments and reinforcement learning [19].",
+      "size": 430,
+      "sentences": 5,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 52,
+      "content": "thod for a robot batching process by building virtual\nenvironments and reinforcement learning [19]. As far as the authors know, there is no prior research on\nthe reinforcement learning of glass flow control systems using\ndisplay transport robots in a digital twin manner, as proposed\nin Fig. 2(c). Agent\nEnvironment\naction At\nstate St\nreward Rt\nRt+1\nSt+1\nFig. 5. Basic structure of Reinforcement learning. III.",
+      "size": 410,
+      "sentences": 7,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 53,
+      "content": "ment\naction At\nstate St\nreward Rt\nRt+1\nSt+1\nFig. 5. Basic structure of Reinforcement learning. III. PHYSICAL SIMULATION APPLICATION AND LEARNING\nIt is necessary to design an optimal layout without actual\nequipment and appropriately respond to changes in the produc-\ntion environment without stopping the production equipment.",
+      "size": 325,
+      "sentences": 5,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 54,
+      "content": "ately respond to changes in the produc-\ntion environment without stopping the production equipment. Therefore, we propose a method to derive an optimal layout\nand minimize facility usage time by implementing a virtual\nprocess environment through physical simulation and exam-\nining various aspects of logistics flow, process balance, and\nproduction management in advance. We use a basic display\nFAB unit process for this purpose. The selected unit process\nis composed of four facilities (Fig.",
+      "size": 492,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 62,
+      "content": "em PK\n1 tR(n) + PK\n1 tw(n). The latter one is\nchanged according to the movement of robot transport. In\na physical simulation, various process parameters can be\napplied, and the term ∆t determined by the robot’s transport\ncan be implemented. Because the use of actual equipment is\nunnecessary, there is no risk of damage to equipment and glass. The detailed system configuration is as follows. The first\nstep is the simulation of a real FAB.",
+      "size": 440,
+      "sentences": 6,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 63,
+      "content": "s. The detailed system configuration is as follows. The first\nstep is the simulation of a real FAB. The simulator used\nhere is the Unity, and the equipment consists of a transfer\nrobot, chamber, and glass. As shown in Fig. 1, the loader\nchamber, unloader chamber, and process chamber are arranged\nin consideration of the transfer robot. The next task is software\nconfiguration. We used C# and created a sensor that detects\nactions based on the robot, robot arm, chamber, and glass.",
+      "size": 481,
+      "sentences": 7,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 65,
+      "content": "are configuration is the same as that in Fig. 6. The second step is process parameter optimization. In the\nsimulation environment, it is possible to evaluate various pro-\ncess parameters as in case of the real FAB unit. Representative\nprocess parameters include glass input interval, glass size,\nweight, number of chambers, chamber arrangement, speed\nof transfer robot, number of robot arms, and process time.",
+      "size": 409,
+      "sentences": 5,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 67,
+      "content": "rning\nis performed to learn the simulator and improve the perfor-\nmance of the flow control policy. Reinforcement learning is\na branch of machine learning, which consists of an agent, an\nenvironment, state, a reward, and an action. At each point\nin time, the agent observes the state of the environment and\nreceives a reward. The goal of the agent is to maximize its\nreward [21]. Fig. 5 shows the basic process of reinforcement learning.",
+      "size": 437,
+      "sentences": 6,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 74,
+      "content": "n Algorithm\n1. Because we are using a single robot agent for learning, the\nnumber of actors is one. The fourth and final step is model creation and application. In this stage, intermediate models are generated continuously\nduring learning. Upon the completion of training, the agent\nbrain file of the final model is created. The file can be applied\nto the simulation environment or the real FAB environment. In this section, we have provided a comprehensive method-\nology.",
+      "size": 472,
+      "sentences": 7,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 76,
+      "content": "T SET-UP\nThe experiment proceeds in two stages, namely basic exper-\niment and extension experiment. The actual FAB is simulated\nin the basic experiment, and the simulation training is verified\nthrough reinforcement learning. A process chamber is added,\nand an expansion experiment is conducted using a two-arm\ntransfer robot. A. Basic experiment\n1) Simulation configuration: The simulation setup is com-\nposed of a one-arm transfer robot, a loader chamber, and\nFig. 9.",
+      "size": 468,
+      "sentences": 6,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 80,
+      "content": "ding to get the glass, rotation to move the\nglass to the next destination, and unloading the glass. • Unloader chamber: This is the goal of the simulation to\nachieve. When the glass enters the chamber, it disappears,\nand the number of glasses is counted. The arm of the transfer robot can grab, move, and place only\none glass; when the arm collides with the glass, the glass is\ndestroyed and disappears. In the same way as an actual FAB\ntransfer robot, a glass guide pin is installed in the arm.",
+      "size": 495,
+      "sentences": 5,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 82,
+      "content": "erlock is set such that\nwhen one action is executed, other actions are not executed\nsimultaneously. 2) Simulation learning through reinforcement learning:\nFor learning the flow control system, reinforcement learning\nwas performed in a Python environment by using ML agents. The performance of reinforcement learning is affected by the\ndefinitions of state, action, and reward components of MDP. The transfer robot, which acts as an agent, requires state\nobservations for learning.",
+      "size": 480,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 91,
+      "content": "ard mentioned in the\nprevious value function. TABLE III\nREWARD AND PENALTY DATA (BASIC EXPERIMENT). Reward\nAction\nValue\nReward 1\nProcessed glass arrives at the unloader\n+4\nPenalty 1\nTime penalty\n-0.01\nPenalty 2\nGlass dropped\n-1\nPenalty 3\nGlass broken\n-1\nPenalty 4\nIncomplete glass arrives at the unloader\n-1\n3) Training through simulation: Unity uses its own soft-\nware as an environment for reinforcement learning and pro-\nvides service ML agents that allow other learning routines to\nproceed based on the learning of neural networks in Python.",
+      "size": 545,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 95,
+      "content": "In a physical simulation, the state information changes\ncontinuously when an action is in progress. As illustrated in\nFigure 13, a reward is obtained when a reward condition occurs\neven as the action is in progress. Consequently, inaccurate\nexperiences are accumulated in the replay buffer required for\nreinforcement learning. For this reason, we check the action\nthat generates the reward and use the st+1 data directly for\ntraining.",
+      "size": 434,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 100,
+      "content": "transfer robot, and an experiment was\nconducted to move the finished glass to the unloader chamber. By adjusting the friction between the glass and the arm and\nusing the guide pin of the arm, we were able to complete the\nprocess without glass separation. The experiment was conducted in three stages. First, process\nparameter optimization was evaluated in the implemented\nsimulation environment.",
+      "size": 395,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 101,
+      "content": "ges. First, process\nparameter optimization was evaluated in the implemented\nsimulation environment. Second, a basic experiment was con-\nducted under two chamber conditions by using a one-arm robot\nand the corresponding parameters. Finally, a three-chamber\ncondition, that is, a confirmed evaluation, was performed using\nthe two-arm robot. A.",
+      "size": 341,
+      "sentences": 5,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 109,
+      "content": "e expanded exper-\nimental environment, the maximum reward obtainable from a\nunit step was obtained. In the simulation action sequence, two\nglasses were loaded from the loader and moved to the process\nchamber, and the process-completed glass was simultaneously\nmoved to the unloader chamber. This was the same as the order of glass processing in an\nactual FAB. A key hyperparameter of the scaling experiment\nwas the discount factor γ.",
+      "size": 433,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 110,
+      "content": "cessing in an\nactual FAB. A key hyperparameter of the scaling experiment\nwas the discount factor γ. As shown in Fig 17, the smaller\nthe gamma value, the more optimal is the scheduling. In this\nmanner, it was possible to secure the randomness of learning\nby reducing the connectivity between the trajectories. Training steps (per 1 million)\nRatio(success glass/failure glass)\n(a)\n(b)\nFig. 15. (a) Configuration of the simulation environment, and (b) training\nresult. VI.",
+      "size": 469,
+      "sentences": 8,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 111,
+      "content": "ass)\n(a)\n(b)\nFig. 15. (a) Configuration of the simulation environment, and (b) training\nresult. VI. CONCLUSION\nThe flow control system is one of the most critical concepts\nin the display manufacturing industry. Optimal design of the\nflow control system that can fulfill diverse market demands\nis important to ensure that a FAB unit can maintain high\nproductivity while manufacturing diverse products. A flow\ncontrol system must be designed and operated considering this\ngoal.",
+      "size": 475,
+      "sentences": 7,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 113,
+      "content": "gest an efficient design and operation plan for display\nmanufacturing logistics management systems. Manufacturing conditions similar to those in real FAB en-\nvironments were implemented in the simulation with physical\nparameter information, and various process parameter split\ntests were performed in the simulation. It was configured\nto identify the cause of the problem in the simulation en-\nvironment and solve the problem by changing the process\nconditions.",
+      "size": 461,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 114,
+      "content": "e problem in the simulation en-\nvironment and solve the problem by changing the process\nconditions. Moreover, we demonstrated that the performance\nof the logistics management system was improved by using\nreinforcement learning. Based on this result, a FAB unit\ncan predict, correct, and evaluate the improvement of serious\nproblems. We expect that it will be possible to pre-evaluate the\ndesign of new production lines for future technologies, such as\nsmall-lot production and smart factories.",
+      "size": 493,
+      "sentences": 4,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 117,
+      "content": "The\ninternational journal of advanced manufacturing technology, vol. 49,\nno. 1, pp. 263–279, 2010. [2] P. Qu and S. J. Mason, “Metaheuristic scheduling of 300-mm lots\ncontaining multiple orders,” IEEE Transactions on Semiconductor Man-\nufacturing, vol. 18, no. 4, pp. 633–643, 2005. [3] B. Waschneck, A. Reichstaller, L. Belzner, T. Altenm¨\nuller, T. Bauern-\nhansl, A. Knapp, and A. Kyek, “Optimization of global production\nscheduling with deep reinforcement learning,” Procedia Cirp, vol. 72,\npp.",
+      "size": 497,
+      "sentences": 10,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 123,
+      "content": "scheduling tasks,” International Journal of pro-\nduction research, vol. 50, no. 1, pp. 41–61, 2012. [10] C. Hong and T.-E. Lee, “Multi-agent reinforcement learning approach\nfor scheduling cluster tools with condition based chamber cleaning\noperations,” in 2018 17th IEEE International Conference on Machine\nLearning and Applications (ICMLA). IEEE, 2018, pp. 885–890. [11] A. Fuller, Z. Fan, C. Day, and C. Barlow, “Digital twin: Enabling\ntechnologies, challenges and open research,” IEEE access, vol.",
+      "size": 500,
+      "sentences": 9,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 125,
+      "content": "atronics and robotics engi-\nneering, 2019, pp. 123–129. [13] V. Mnih, K. Kavukcuoglu, D. Silver, A. A. Rusu, J. Veness, M. G.\nBellemare, A. Graves, M. Riedmiller, A. K. Fidjeland, G. Ostrovski\net al., “Human-level control through deep reinforcement learning,”\nnature, vol. 518, no. 7540, pp. 529–533, 2015. [14] P. Jin, K. Keutzer, and S. Levine, “Regret minimization for partially\nobservable deep reinforcement learning,” in International conference on\nmachine learning. PMLR, 2018, pp. 2342–2351.",
+      "size": 498,
+      "sentences": 10,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 127,
+      "content": "“Minerl: A large-scale dataset of minecraft\ndemonstrations,” arXiv preprint arXiv:1907.13440, 2019. [16] J. Dayhoff and R. Atherton, “Signature analysis of dispatch schemes\nin wafer fabrication,” IEEE transactions on components, hybrids, and\nmanufacturing technology, vol. 9, no. 4, pp. 518–525, 1986.",
+      "size": 301,
+      "sentences": 5,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 128,
+      "content": "ransactions on components, hybrids, and\nmanufacturing technology, vol. 9, no. 4, pp. 518–525, 1986. [17] R. Atherton and J. Dayhoff, “Signature analysis: Simulation of inventory,\ncycle time, and throughput trade-offs in wafer fabrication,” IEEE trans-\nactions on components, hybrids, and manufacturing technology, vol. 9,\nno. 4, pp. 498–507, 1986.",
+      "size": 347,
+      "sentences": 8,
+      "keyword_count": 5,
+      "is_relevant": true
+    },
+    {
+      "id": 129,
+      "content": "ns-\nactions on components, hybrids, and manufacturing technology, vol. 9,\nno. 4, pp. 498–507, 1986. [18] A. H. Sakr, A. Aboelhassan, S. Yacout, and S. Bassetto, “Simulation and\ndeep reinforcement learning for adaptive dispatching in semiconductor\nmanufacturing systems,” Journal of Intelligent Manufacturing, pp. 1–14,\n2021. [19] M. Hildebrand, R. S. Andersen, and S. Bøgh, “Deep reinforcement\nlearning for robot batching optimization and flow control,” Procedia\nManufacturing, vol. 51, pp.",
+      "size": 490,
+      "sentences": 8,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 130,
+      "content": "nt\nlearning for robot batching optimization and flow control,” Procedia\nManufacturing, vol. 51, pp. 1462–1468, 2020. [20] J. Schulman, F. Wolski, P. Dhariwal, A. Radford, and O. Klimov, “Prox-\nimal policy optimization algorithms,” arXiv preprint arXiv:1707.06347,\n2017. [21] R. S. Sutton and A. G. Barto, Reinforcement learning: An introduction. MIT press, 2018. Hwajong Lee received the B.S.",
+      "size": 392,
+      "sentences": 7,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 131,
+      "content": ". G. Barto, Reinforcement learning: An introduction. MIT press, 2018. Hwajong Lee received the B.S. degree in electronic and electrical engineering\nfrom the Sungkyunkwan University, Suwon, South Korea, and M.E. degree in\nengineering practice from the Seoul National University, Seoul, South Korea,\nin 2021. He is a senior engineer at Samsung display, South Korea. His current\nresearch interests include machine learning in manufacturing process. Chan Kim received the B.S.",
+      "size": 472,
+      "sentences": 9,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 132,
+      "content": "nt\nresearch interests include machine learning in manufacturing process. Chan Kim received the B.S. degree in automotive engineering from the\nHanyang University, Seoul, South Korea. He is currently pursuing the Ph.D.\ndegree in electrical and computer engineering, Seoul National University. His\ncurrent research interests include reinforcement learning, and autonomous\ndriving. Seong-Woo Kim (M’11) received the B.S. and M.S.",
+      "size": 425,
+      "sentences": 7,
+      "keyword_count": 2,
+      "is_relevant": true
+    }
+  ]
+}

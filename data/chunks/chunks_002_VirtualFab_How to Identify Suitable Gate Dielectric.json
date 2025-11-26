@@ -1,0 +1,289 @@
+{
+  "source": "ArXiv",
+  "filename": "002_VirtualFab_How to Identify Suitable Gate Dielectric.pdf",
+  "domain": "VirtualFab",
+  "total_chars": 122956,
+  "total_chunks": 35,
+  "chunks": [
+    {
+      "id": 13,
+      "content": "gate\nstacks (14, 15), largely due to material availability and suitability for process integration. Section 2 gives an overview of the\npossible fabrication methods as well as their limitations, evaluated for two different applications for 2D FETs, the first one being\nplanar devices in the back-end-of-line (BEOL) for power delivery, see Figure 1(a), the second one being 2D complementary\nFETs (CFETs) in the front-end-of-line (FEOL), see Figure 1(b)-(e), requiring the deposition of the insulator on both the top\nand the bottom of the 2D NS.",
+      "size": 542,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 21,
+      "content": "ed in the FEOL and relocating them to the BSPDN would\nfree up space on the costly wafer front side. Here, a simple planar back-gate or top-gate configuration would be sufficient, see\nFigure 1(a). The most cost competitive to silicon hybrid bonding would be monolithic deposition of the 2D channel and dielectric\nwhere the thermal budget must be BEOL-compatible (processing temperatures ≤400 ◦C).",
+      "size": 395,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 23,
+      "content": "see Figure 1 (b-e), which poses additional\nchallenges for insulator deposition, see Subsection 2A. In general, there are two primary approaches: direct synthesis of a gate\ninsulator on a 2D semiconductor, including via atomic layer deposition (ALD) (Subsection 2B), oxidation (Subsection 2C), or\nevaporation (Subsection 2D); and transfer methods that stack the insulator and channel (Subsection 2E). A. Insulator Deposition Requirements for 2D CFETs.",
+      "size": 450,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 24,
+      "content": "stack the insulator and channel (Subsection 2E). A. Insulator Deposition Requirements for 2D CFETs. Design-technology co-optimization (DTCO) simulations indicate that 2D\nchannels could outperform silicon in the ultra-scaled CFET configuration (20). A prototype 2D CFET device layout, adapted\nfrom Chung et al. (21, 22), is shown in Figure 1(d) along the source-drain direction and in (e) along the gate direction.",
+      "size": 413,
+      "sentences": 5,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 25,
+      "content": "22), is shown in Figure 1(d) along the source-drain direction and in (e) along the gate direction. To\nfabricate 2D CFETs in a gate last process, first a sacrificial insulator is deposited, then the protection insulation and the 2D\nchannel are deposited monolithically, followed by the sacrificial top insulator. These steps repeat until the entire 2D channel\nstack is grown, which is then etched into pillars, around which source and drain contacts are formed.",
+      "size": 460,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 26,
+      "content": "ack is grown, which is then etched into pillars, around which source and drain contacts are formed. Next, all sacrificial layers\nare selectively etched, releasing the 2D channels, which remain protected by the protection insulation layers. Finally, the gaps\nbetween channels are filled with a high-κ gate insulator using ALD or oxidation and gate metal deposition. A key constraint for all direct growth methods is the thermal budget for insulator deposition.",
+      "size": 459,
+      "sentences": 4,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 27,
+      "content": "ion. A key constraint for all direct growth methods is the thermal budget for insulator deposition. Depending on the surrounding\natmosphere, uncapped TMDs experience chalcogen out-gasing at temperatures above 250 ◦C for WS2 (23) or above 350 ◦C for\nMoS2 (23). Once encapsulated, TMDs can typically withstand temperatures of up to 550 ◦C (23, 24), even though the yield\nmay suffer for anneals above 350 ◦C. B. Atomic Layer Deposition.",
+      "size": 433,
+      "sentences": 6,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 28,
+      "content": "◦C (23, 24), even though the yield\nmay suffer for anneals above 350 ◦C. B. Atomic Layer Deposition. ALD is the standard commercially applied method to deposit amorphous HfO2 or dipole interlayers\nlike Al2O3 or La2O3 in scaled Si technologies. ALD offers conformal deposition (25, 26), allowing the coating of suspended\nchannels in a CFET design. Yet, seeding an ALD layer on a defect-free van der Waals (vdW) surface is challenging (25, 27).",
+      "size": 441,
+      "sentences": 6,
+      "keyword_count": 4,
+      "is_relevant": true
+    },
+    {
+      "id": 29,
+      "content": "gn. Yet, seeding an ALD layer on a defect-free van der Waals (vdW) surface is challenging (25, 27). Direct ALD of amorphous oxides on vdW surfaces nucleates poorly (25, 26). Plasma enhanced ALD (PEALD) has been\nsuggested to improve nucleation, but the plasma exposure damages the TMD layer, rendering it unsuitable for ALD growth on\nmonolayer channels (27).",
+      "size": 357,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 35,
+      "content": "f crystalline hexagonal AlN (hAlN) on TMDs (36), even though plasma damage of the TMD is a concern. Despite considerable progress, none of the interlayers for HfO2 ALD can currently offer a clean vdW interface with the 2D\nchannel, as all methods introduce a relatively high defect density, either forming a defective interlayer, e.g., AlOx (33, 35) or\nSiO2 (31), or creating defects in the TMD (27, 36), even though the trap densities are gradually being reduced (31), see also\nSection 3D.",
+      "size": 489,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 36,
+      "content": "TMD (27, 36), even though the trap densities are gradually being reduced (31), see also\nSection 3D. As interface defect densities decrease with improved growth methods, ALD nucleation will likely become more\nchallenging. C. Oxidation. Oxidizing layered semiconductors into their respective native oxides yields high-quality interfaces and conformal\ncoatings for complex geometries, including suspended channels in CFET designs.",
+      "size": 427,
+      "sentences": 4,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 47,
+      "content": "s were developed, such as silicon nitride cantilevers (52) or the\nvdW pick-up transfer method (50). Recently, scalable transfer methods (53) for CVD-grown TMDs have been developed, even\nthough they have not yet been used to transfer dielectrics. Independently, a wafer-scale transfer of ALD-grown amorphous\nAl2O3 and HfO2 layers has been demonstrated, albeit with considerable variability (54). For more details on insulator transfer\nsee Section SIA. 3.",
+      "size": 453,
+      "sentences": 5,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 81,
+      "content": "it increases exponentially to 1014 cm−2eV−1, causing a stretch-out\nof the transfer characteristics. This stretch-out prevents low-power operation and remains a key gate stack challenge. 4\n|\nKnobloch et al. === Page 5 ===\nE. Threshold Voltage Variability. Vth is determined by the charge balance in the channel and insulator, along with the gate\nmetal’s work function. It depends on the dielectric constant, the interface quality, and the density of charged defects in the\ninsulator, see Figure 2(b).",
+      "size": 499,
+      "sentences": 6,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 127,
+      "content": "tantalum oxide (Ta2O5) (119, 146), aluminum nitride (AlN) (130), and silicon nitride (Si3N4) (141). Typically, these dielectrics are deposited via ALD (25, 27), see Subsection 2B, generally requiring a seed layer for deposition on\ntop of 2D semiconductors (28, 29). ALD Al2O3/HfO2 gate stacks are the currently preferred method for 2D devices fabricated\nin industry-compatible environments (14, 15, 22, 32, 33, 65, 147).",
+      "size": 420,
+      "sentences": 3,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 134,
+      "content": "asured leakage\ncurrents are higher than the theoretical predictions due to the presence of defects. At the same time, correctly determining the\nEOT of the measured gate dielectrics is challenging, as CET is the actual measurement quantity (see Subsection 3A) and it is\noften difficult to reliably rule out the presence of a thin layer of organic contamination at the 2D/insulator interface (51) that\nmight reduce leakage currents, see Section SI H. To quantify how surrounding insulators affect mobility, we solved the BTE\nfor monolayer MoS2 sandwiched between two insulators in a double-gate configuration, see Subsection 3C and Section SI D.\nThese values represent upper mobility limits, refined calculations may include the impact of long-range electrostatics on the\n2D material phonons (148, 149) or the impact of potential fluctuations on the order of 200 meV at the atomic scale due to\nthe defective interface between 2D semiconductors and ALD oxides (150).",
+      "size": 963,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 135,
+      "content": "at the atomic scale due to\nthe defective interface between 2D semiconductors and ALD oxides (150). Figure 4(d) plots the mobility as a function of the\ndielectric constant and the charged impurity concentration. As charged impurities are screened more in dielectrics with high\npermittivity, their impact is largest at interfaces with dielectrics with small dielectric constants like hBN.",
+      "size": 386,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 138,
+      "content": "d gate stacks at exactly\nthese conditions, hence we used conditions that were as close as possible. On-currents are typically higher in 2D prototypes\nfrom industry due to better 2D film quality and smaller contact resistances. At the same time, the defective interface between\nALD HfO2 and the 2D channel makes it difficult to reach a scaled EOT at a small SSavg, which is often achieved for native\noxides and transferred dielectrics in academia.",
+      "size": 446,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 141,
+      "content": "nel effects and providing steep switching with SSavg < 65 mV/dec at scaled gate\nlengths LG < 12 nm. At the same time, the interface of the 2D TMD with the insulator must not degrade the semiconductor\nmobility via remote phonon and impurity scattering, enabling on-current densities above 600 µA µm−1.These goals need to be\nreached when using conformal deposition methods that allow integration into a gate-last fabrication of stacked 2D NS FETs,\nmost likely ALD or oxidation.",
+      "size": 475,
+      "sentences": 2,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 142,
+      "content": "allow integration into a gate-last fabrication of stacked 2D NS FETs,\nmost likely ALD or oxidation. Currently, promising insulator candidates include the native oxides Bi2SeO5 (45) or HfO2 (39),\nor ALD layers, for example HfO2 (104) or Er2O3 (145), potentially with interlayers like hAlN (36), Al2O3 (68), SiO2 (31),\nGdAlOx (59), Sb2O3 (103) or Ta2O5 (146).",
+      "size": 357,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 166,
+      "content": "a 300mm FAB in IEDM. (IEEE), pp. 725–728 (2021) 10.1109/IEDM19574.2021.9720517. 8\n|\nKnobloch et al. === Page 9 ===\n[34]\nI Cho, Adsorption of aluminum precursors on MoS2 toward nucleation of atomic layer deposition. Colloid Interface Sci. Commun. 65, 10083 (2025) 10.1016/j.colcom.2025.100823. [35]\nJS Ko, et al., Achieving 1-nm-Scale Equivalent Oxide Thickness Top-Gate Dielectric on Monolayer Transition Metal Dichalcogenide Transistors With CMOS-Friendly Approaches.",
+      "size": 468,
+      "sentences": 9,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 176,
+      "content": "Integration in 2024 IEEE Symposium on VLSI Technology and Circuits\n(VLSI Technology and Circuits). (IEEE, Honolulu, HI, USA), pp. 1–2 (2024) 10.1109/VLSITechnologyandCir46783.2024.10631364. [54]\nZ Lu, et al., Wafer-scale high-κ dielectrics for two-dimensional circuits via van der Waals integration. Nat. Commun. 14, 2340 (2023) 10.1038/s41467-023-37887-x. [55]\nM Stengel, NA Spaldin, Origin of the dielectric dead layer in nanoscale capacitors. Nature 443, 679–682 (2006) 10.1038/nature05148.",
+      "size": 493,
+      "sentences": 9,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 184,
+      "content": "enum disulfide field-effect-transistor. J. Phys. D: Appl. Phys. 51 (2018) 10.1088/1361-6463/aaa58c. [70]\nA Gaur, et al., Analysis of admittance measurements of MOS capacitors on CVD grown bilayer MoS2. 2D Mater. 6, ab20fb (2019) 10.1088/2053-1583/ab20fb. [71]\nA Gaur, et al., A MOS capacitor model for ultra-thin 2D semiconductors: The impact of interface defects and channel resistance. 2D Mater. 7, 035018 (2020) 10.1088/2053-1583/ab7cac.",
+      "size": 440,
+      "sentences": 11,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 185,
+      "content": "t of interface defects and channel resistance. 2D Mater. 7, 035018 (2020) 10.1088/2053-1583/ab7cac. [72]\nV Mootheri, et al., Interface admittance measurement and simulation of dual gated CVD WS2 MOSCAPs:\nMapping the DIT(E) profile. Solid-State Electron. 183, 108035 (2021)\n10.1016/j.sse.2021.108035. [73]\nSH Song, et al., Probing defect dynamics in monolayer MoS2 via noise nanospectroscopy. Nat. Commun. 8, 1–5 (2017) 10.1038/s41467-017-02297-3.",
+      "size": 446,
+      "sentences": 10,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 204,
+      "content": "dichalcogenides: from monolayer to bulk. npj 2D Mater. Appl. 2, 6 (2018)\n10.1038/s41699-018-0050-x. [107]\nY Wang, et al., Ultraflat single-crystal hexagonal boron nitride for wafer-scale integration of a 2D-compatible high-κ metal gate. Nat. Mater. 23, 1495–1501 (2024) 10.1038/s41563-024-01968-z. [108]\nSJ Chang, et al., Van der Waals Epitaxy of 2D h-AlN on TMDs by Atomic Layer Deposition at 250◦C. Appl. Phys. Lett. 120 (2022) 10.1063/5.0083809.",
+      "size": 448,
+      "sentences": 13,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 221,
+      "content": "ion to Wafer-Scale Graphene Tunnelling Transistors. Sci. Reports 6, 20907 (2016) 10.1038/srep20907. [141]\nPH Ho, et al., High-Performance WSe2 Top-Gate Devices with Strong Spacer Doping. Nano Lett. 23, 10236–10242 (2023) 10.1021/acs.nanolett.3c02757. [142]\nH Zhao, et al., Multilayer MoS 2 Back-Gate Transistors with ZrO 2 Dielectric Layer Optimization for Low-Power Electronics. physica status solidi (a) 219, 2100760 (2022) 10.1002/pssa.202100760.",
+      "size": 449,
+      "sentences": 8,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 229,
+      "content": "es of electron-beam deposited Ga2O3 films. Appl. Phys. Lett. 64, 2715–2717 (1994) 10.1063/1.111452. [156]\nD Waldhoer, et al., Silicon-Impurity Defects in Calcium Fluoride: A First Principles Study in European Solid-State Device Research Conference. (IEEE), Vol. 2022-Septe, pp. 380–383 (2022)\n10.1109/ESSDERC55479.2022.9947104. [157]\nR Solomon, A Sher, MW Muller, Polarization in LaF3. J. Appl. Phys. 37, 3427–3432 (1966) 10.1063/1.1708875.",
+      "size": 440,
+      "sentences": 13,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 235,
+      "content": "by etching of sacrificial water-soluble layers. Nat. Mater. 15, 1255–1260 (2016) 10.1038/nmat4749. [168]\nH Kim, et al., Remote epitaxy. Nat. Rev. Methods Primers 2, 40 (2022) 10.1038/s43586-022-00122-w.\n[169]\nBI Park, et al., Remote Epitaxy: Fundamentals, Challenges, and Opportunities. Nano Lett. 24, 2939–2952 (2024) 10.1021/acs.nanolett.3c04465. [170]\nT Schram, et al., Challenges of wafer-scale integration of 2D semiconductors for high-performance transistor circuits. Adv. Mater.",
+      "size": 485,
+      "sentences": 13,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 237,
+      "content": "d Circuits). (IEEE, Kyoto, Japan), pp. 1–2 (2023) 10.23919/VLSITechnologyandCir57934.2023.10185215. [172]\nA Phommahaxay, et al., The Growing Application Field of Laser Debonding: From Advanced Packaging to Future Nanoelectronics in 2019 International Wafer Level Packaging Conference (IWLPC). (IEEE, San Jose, CA, USA), pp. 1–8 (2019) 10.23919/IWLPC.2019.8914124. [173]\nY Shen, et al., Variability and Yield in h-BN-Based Memristive Circuits: The Role of Each Type of Defect. Adv. Mater.",
+      "size": 487,
+      "sentences": 9,
+      "keyword_count": 3,
+      "is_relevant": true
+    },
+    {
+      "id": 238,
+      "content": "riability and Yield in h-BN-Based Memristive Circuits: The Role of Each Type of Defect. Adv. Mater. 33, 2103656 (2021) 10.1002/adma.202103656. [174]\nTE Lee, et al., Nearly Ideal Subthreshold Swing in Monolayer MoS2 Top-Gate nFETs with Scaled EOT of 1 nm in 2022 International Electron Devices Meeting (IEDM). (IEEE, San Francisco, CA,\n10\n|\nKnobloch et al. === Page 11 ===\nUSA), pp. 7.4.1–7.4.4 (2022) 10.1109/IEDM45625.2022.10019552.",
+      "size": 433,
+      "sentences": 8,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 244,
+      "content": "junctions. J. Vac. Sci. & Technol. A: Vacuum, Surfaces, Films 19, 934–939 (2001) 10.1116/1.1365132. [185]\nSA Chambers, PV Sushko, Influence of crystalline order and defects on the absolute work functions and electron affinities of Ti O 2 - and SrO-terminated n - SrTi O 3 ( 001 ). Phys. Rev. Mater. 3,\n125803 (2019) 10.1103/PhysRevMaterials.3.125803. [186]\nSW Lee, JH Han, CS Hwang, Electronic Conduction Mechanism of SrTiO3 Thin Film Grown on Ru Electrode by Atomic Layer Deposition. Electrochem.",
+      "size": 497,
+      "sentences": 12,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 245,
+      "content": "uction Mechanism of SrTiO3 Thin Film Grown on Ru Electrode by Atomic Layer Deposition. Electrochem. Solid-State Lett. 12, G69–G71 (2009)\n10.1149/1.3212897. [187]\nOA Dicks, et al., The origin of negative charging in amorphous al2o3 films: The role of native defects. Nanotechnology 30 (2019) 10.1088/1361-6528/ab0450. [188]\nYC Yeo, TJ King, C Hu, Direct tunneling leakage current and scalability of alternative gate dielectrics. Appl. Phys. Lett. 81, 2091–2093 (2002) 10.1063/1.1506941.",
+      "size": 485,
+      "sentences": 11,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 304,
+      "content": "xample perovskites like strontium titanate (SrTiO3) can be transferred on top of 2D\nsemiconductors. In this case, the target perovskite films have to be epitaxially grown on a lattice-matched oxide sacrificial\nlayer (98, 167) using for example MBE, or pulsed laser deposition (PLD). Next, a polymer coating is deposited on top of\nthe perovskite and the sacrificial oxide is selectively etched in water to release the perovskite film into a thin freestanding\nmembrane which can be transferred (167).",
+      "size": 498,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 308,
+      "content": "erring TMDs (mostly monolayers) on the 300mm scale, it has never been used to transfer dielectrics. Layered dielectrics are typically few-nanometers-thick and are therefore mechanically stronger than 2D channels, which may\nfacilitate the transfer process and lead to fewer pinholes and cracks (173). Recently, a wafer-scale transfer of ALD-grown\namorphous Al2O3 and HfO2 layers with thicknesses in the range from 3 nm to 20 nm has been demonstrated (54).",
+      "size": 454,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 309,
+      "content": "Al2O3 and HfO2 layers with thicknesses in the range from 3 nm to 20 nm has been demonstrated (54). Here a thin\npolyvinyl alcohol (PVA) layer of 9 nm is spin coated on silicon, depositing the ALD oxide on top and applying a thermal release\ntape. This stack is peeled off from the sacrificial silicon, the PVA is etched with an oxygen plasma and the oxide is transferred\nonto a 2D semiconductor (54).",
+      "size": 398,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 310,
+      "content": "the PVA is etched with an oxygen plasma and the oxide is transferred\nonto a 2D semiconductor (54). The 2D FET based on transferred ALD oxides showed good performance, even though the\ntransfer introduced strain and organic contamination, causing a high device to device variability (54). B. Best Practices for Capacitance Measurements. In the following, we provide “best” practices to reliably evaluate the CET\nof scaled gate stacks, see Figure 2(c).",
+      "size": 449,
+      "sentences": 5,
+      "keyword_count": 2,
+      "is_relevant": true
+    }
+  ]
+}

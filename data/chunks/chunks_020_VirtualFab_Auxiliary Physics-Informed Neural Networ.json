@@ -1,0 +1,17 @@
+{
+  "source": "ArXiv",
+  "filename": "020_VirtualFab_Auxiliary Physics-Informed Neural Networ.pdf",
+  "domain": "VirtualFab",
+  "total_chars": 47943,
+  "total_chunks": 1,
+  "chunks": [
+    {
+      "id": 122,
+      "content": "formation Theory 39, 930–945\n(1993), conference Name: IEEE Transactions on Information Theory. 12I. Goodfellow, Y. Bengio, and A. Courville, Deep learning, Adaptive com-\nputation and machine learning (The MIT Press, Cambridge, Massachusetts,\n2016). 13G. Pang, L. Lu,\nand G. E. Karniadakis, “fPINNs: Fractional Physics-\nInformed Neural Networks,” SIAM Journal on Scientific Computing 41,\nA2603–A2626 (2019), publisher: Society for Industrial and Applied Math-\nematics. 14G.",
+      "size": 472,
+      "sentences": 6,
+      "keyword_count": 2,
+      "is_relevant": true
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "source": "ArXiv",
+  "filename": "023_VirtualFab_Topological Darkness_ How to Design a Me.pdf",
+  "domain": "VirtualFab",
+  "total_chars": 44434,
+  "total_chunks": 3,
+  "chunks": [
+    {
+      "id": 102,
+      "content": "sign UTDM which relies on the possibility to design a metamaterial with given spectral \nproperties. It is important that UTDMs can be realized using not only metal, but also semiconductor \nor dielectric structures, while local structure imperfections appear to be not significant due to \ntopologically protected zero reflection. Therefore, in contrast to many other metamaterial \nstructures, they can be fabricated by cost-efficient methods such as nanoparticle lithography or self-\nassembling.",
+      "size": 494,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 103,
+      "content": "y can be fabricated by cost-efficient methods such as nanoparticle lithography or self-\nassembling. Our work opens endless opportunities for theoreticians to design hypersensitive TDMs \nfor biosensing (and other applications) as well as novel exciting possibilities for experimentalists to \nrealize these UTDMs using nanostructured and heterostructured (meta)materials.",
+      "size": 369,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 113,
+      "content": "rts. Our work paves \nway to robust, inexpensive, fast and accessible label-free optical biosensors. === Page 19 ===\nMaterials and Methods \nDevice fabrication \nHigh-quality regular and homogenous arrays of gold coupled dot pairs were produced by e-beam \nlithography on a clean microscopic glass substrate covered by a thin Cr (5nm) sublayer (routinely \nused to avoid charging during electron beam lithography).",
+      "size": 409,
+      "sentences": 3,
+      "keyword_count": 2,
+      "is_relevant": true
+    }
+  ]
+}

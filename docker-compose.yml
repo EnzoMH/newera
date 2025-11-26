@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  # MongoDB 서비스
+  mongodb:
+    image: mongo:7.0
+    container_name: semiconductor-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: semiconductor_rag
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - mongodb_config:/data/configdb
+    networks:
+      - rag-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # RAG 애플리케이션
+  rag-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: semiconductor-rag
+    restart: unless-stopped
+    runtime: nvidia  # NVIDIA GPU 런타임
+    environment:
+      # MongoDB 설정
+      MONGODB_URI: mongodb://mongodb:27017/
+      MONGODB_DATABASE: semiconductor_rag
+      MONGODB_COLLECTION: documents
+      
+      # Ollama 설정 (로컬 또는 별도 컨테이너)
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      MODEL_NAME: ${MODEL_NAME:-exaone}
+      
+      # Gemini 설정 (옵션)
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.5-pro}
+      
+      # 임베딩 모델
+      EMBEDDING_MODEL: BAAI/bge-large-en-v1.5
+      
+      # 데이터 경로
+      FAISS_INDEX_PATH: /app/data/vectordb/faiss.index
+      
+      # CUDA 설정
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+      
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - rag-network
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+volumes:
+  mongodb_data:
+    driver: local
+  mongodb_config:
+    driver: local
+
+networks:
+  rag-network:
+    driver: bridge
+
+
+
+

@@ -1,0 +1,33 @@
+{
+  "source": "ArXiv",
+  "filename": "009_VirtualFab_Contemporary implementations of spiking .pdf",
+  "domain": "VirtualFab",
+  "total_chars": 153139,
+  "total_chunks": 3,
+  "chunks": [
+    {
+      "id": 145,
+      "content": "ted that\nSpiNNaker2 enabling a 10× increase in neural simulation\ncapacity per watt over SpiNNaker1. Among the poten-\ntial applications for the SpiNNaker2 the following stand\nout: naturally, brain research and whole-brain model-\ning, biological neural simulations with complex plasticity\nrules (with Spike-timing-dependent plasticity, STDP, for\nexample), low-power inferencing for robotics and embed-\nded AI, large-scale execution of hybrid AI models, au-\ntonomous vehicles, and other real-time machine learning\napplications.",
+      "size": 524,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 401,
+      "content": "015) pp. 1–8. [42] B. D. Learning, A performance and power analysis,\nNVidia Whitepaper, Nov (2015). [43] C. Mayr, S. Hoeppner, and S. Furber, Spinnaker 2: A\n10 million core processor system for brain simulation\nand machine learning, arXiv preprint arXiv:1911.02385\n10.3233/978-1-61499-949-2-277 (2019).",
+      "size": 302,
+      "sentences": 4,
+      "keyword_count": 2,
+      "is_relevant": true
+    },
+    {
+      "id": 402,
+      "content": "ulation\nand machine learning, arXiv preprint arXiv:1911.02385\n10.3233/978-1-61499-949-2-277 (2019). [44] E. Painkras, L. A. Plana, J. Garside, S. Temple,\nF. Galluppi, C. Patterson, D. R. Lester, A. D. Brown,\nand S. B. Furber, Spinnaker: A 1-w 18-core system-on-\nchip for massively-parallel neural network simulation,\nIEEE Journal of Solid-State Circuits 48, 1943 (2013).",
+      "size": 370,
+      "sentences": 2,
+      "keyword_count": 2,
+      "is_relevant": true
+    }
+  ]
+}
