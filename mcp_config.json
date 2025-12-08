@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "newera": {
+      "command": "python",
+      "args": ["mcp_server.py"],
+      "env": {
+        "OLLAMA_MODEL": "qwen2.5-3b-instruct:latest",
+        "GOOGLE_API_KEY": "${GOOGLE_API_KEY}",
+        "MONGODB_URL": "mongodb://localhost:27017"
+      }
+    }
+  }
+}

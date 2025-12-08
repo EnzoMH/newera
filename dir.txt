@@ -1,0 +1,20 @@
+newera/
+├── main.py                    # 🚀 애플리케이션 진입점 (단일 책임)
+├── app/                       # 📦 애플리케이션 코어
+│   ├── __init__.py           # 🏭 앱 팩토리 (FastAPI 앱 생성)
+│   ├── core/                 # 🎯 코어 비즈니스 로직
+│   │   ├── __init__.py
+│   │   ├── rag_system.py     # 💡 RAGSystem (단일 시스템 관리)
+│   │   ├── crawler.py        # 🕷️ 문서 크롤러
+│   │   ├── vector_store.py   # 🗄️ 벡터 저장소
+│   │   └── llm_providers.py  # 🤖 LLM 제공자들
+│   ├── api/                  # 🌐 REST API 레이어
+│   │   ├── __init__.py
+│   │   ├── router.py         # 🔌 API 라우터
+│   │   └── schemas.py        # 📋 요청/응답 스키마
+│   └── web/                  # 🎨 웹 UI 레이어
+│       ├── __init__.py
+│       └── gradio_ui.py      # 🎭 Gradio 인터페이스
+├── base_config.py            # ⚙️ 설정 유지 (수정 가능)
+├── requirements.txt          # 📦 의존성 유지
+└── .env                      # 🔐 환경변수 (선택)
