@@ -24,20 +24,23 @@ class VectorSearchTool(BaseTool):
         동기 검색 실행
         """
         try:
-            logger.info(f"🔍 벡터 검색: {query}")
+            logger.info(f"🔍 실제 벡터 검색: {query}")
 
-            # TODO: 실제 벡터 검색 구현
-            # 현재는 Dummy 결과 반환
+            # 실제 VectorDB 사용
+            from ..core.vector_db import get_vector_db
+            
+            vector_db = get_vector_db()
+            results = vector_db.similarity_search(query, k=5)
 
-            dummy_results = [
-                {"id": "doc_001", "content": "반도체 제조 공정에 대한 문서", "score": 0.95},
-                {"id": "doc_002", "content": "Digital Twin 기술 설명", "score": 0.89},
-                {"id": "doc_003", "content": "Virtual Metrology 적용 사례", "score": 0.87}
-            ]
+            if not results:
+                return "검색 결과가 없습니다. VectorDB에 문서가 추가되지 않았을 수 있습니다."
 
-            result_text = f"벡터 검색 결과 ({len(dummy_results)}개):\n"
-            for i, result in enumerate(dummy_results, 1):
-                result_text += f"{i}. {result['content']} (유사도: {result['score']})\n"
+            result_text = f"벡터 검색 결과 ({len(results)}개):\n"
+            for i, result in enumerate(results, 1):
+                content = result.get('content', result.get('page_content', ''))[:150] + "..."
+                score = result.get('score', 'N/A')
+                source = result.get('metadata', {}).get('source', 'Unknown')
+                result_text += f"{i}. [{source}] {content} (유사도: {score})\n"
 
             return result_text
 
@@ -69,28 +72,37 @@ class DocumentChunkerTool(BaseTool):
         try:
             logger.info("📄 문서 청킹 시작")
 
-            # 기본 청크 크기
-            chunk_size = 512
-            overlap = 50
+            # LangChain RecursiveCharacterTextSplitter 사용
+            from langchain.text_splitter import RecursiveCharacterTextSplitter
 
-            # 간단한 텍스트 청킹 (실제로는 더 정교한 알고리즘)
-            words = input_text.split()
-            chunks = []
+            text_splitter = RecursiveCharacterTextSplitter(
+                chunk_size=1000,
+                chunk_overlap=200,
+                separators=["\n\n", "\n", ". ", " ", ""],
+                length_function=len,
+            )
 
-            i = 0
-            while i < len(words):
-                chunk_words = words[i:i + chunk_size]
-                chunk_text = " ".join(chunk_words)
-                chunks.append(chunk_text)
+            # 파일 경로인지 확인 후 읽기
+            content = input_text
+            if input_text.endswith(('.txt', '.md', '.py', '.js', '.json', '.pdf')):
+                if input_text.endswith('.pdf'):
+                    # PDF는 별도 처리 필요
+                    return "PDF 파일은 PDF Tool을 사용하세요."
+                try:
+                    with open(input_text, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                except Exception as e:
+                    return f"파일 읽기 실패: {e}"
 
-                # 오버랩만큼 이동
-                i += chunk_size - overlap
-                if i <= 0:
-                    break
+            chunks = text_splitter.split_text(content)
 
-            result = f"문서 청킹 완료: {len(chunks)}개 청크 생성\n\n"
+            result = f"LangChain 문서 청킹 완료: {len(chunks)}개 청크 생성\n"
+            result += f"- 원본 길이: {len(content):,} 문자\n"
+            result += f"- 청크 크기: 최대 1000자 (오버랩 200자)\n\n"
+
             for i, chunk in enumerate(chunks[:3], 1):  # 처음 3개만 표시
-                result += f"청크 {i}: {chunk[:100]}...\n\n"
+                preview = chunk[:100] + "..." if len(chunk) > 100 else chunk
+                result += f"청크 {i}: {preview}\n\n"
 
             if len(chunks) > 3:
                 result += f"... 외 {len(chunks) - 3}개 청크"
@@ -148,6 +160,78 @@ class ContextRetrieverTool(BaseTool):
         비동기 컨텍스트 검색
         """
         return self._run(query, run_manager)
+
+
+class PDFProcessorTool(BaseTool):
+    """
+    PDF 처리 도구 (LangChain document parser 기반)
+    PDF 파일을 텍스트로 변환하고 청킹
+    """
+
+    name = "pdf_processor"
+    description = "PDF 파일을 처리하여 텍스트를 추출하고 청킹합니다. 파일 경로를 입력하세요."
+
+    def _run(self, file_path: str, run_manager: Optional[CallbackManagerForToolRun] = None) -> str:
+        """
+        PDF 처리 실행
+        """
+        try:
+            logger.info(f"📄 PDF 처리 시작: {file_path}")
+
+            # LangChain PDF 로더들
+            from langchain_community.document_loaders import PyPDFLoader
+            from langchain.text_splitter import RecursiveCharacterTextSplitter
+            from pathlib import Path
+
+            # 파일 존재 확인
+            pdf_path = Path(file_path)
+            if not pdf_path.exists():
+                return f"파일이 존재하지 않습니다: {file_path}"
+
+            if not pdf_path.suffix.lower() == '.pdf':
+                return "PDF 파일만 처리 가능합니다."
+
+            # PDF 로더 사용
+            loader = PyPDFLoader(str(pdf_path))
+            documents = loader.load()
+
+            if not documents:
+                return "PDF에서 텍스트를 추출할 수 없습니다."
+
+            # 텍스트 청킹
+            text_splitter = RecursiveCharacterTextSplitter(
+                chunk_size=1000,
+                chunk_overlap=200,
+                separators=["\n\n", "\n", ". ", " ", ""]
+            )
+            chunks = text_splitter.split_documents(documents)
+
+            # 결과 생성
+            total_pages = len(documents)
+            total_chunks = len(chunks)
+            total_chars = sum(len(doc.page_content) for doc in documents)
+
+            result = f"PDF 처리 완료: {pdf_path.name}\n"
+            result += f"- 총 페이지: {total_pages}페이지\n"
+            result += f"- 추출 텍스트: {total_chars:,} 문자\n"
+            result += f"- 생성 청크: {total_chunks}개\n\n"
+
+            # 샘플 청크
+            if chunks:
+                sample = chunks[0].page_content[:200] + "..." if len(chunks[0].page_content) > 200 else chunks[0].page_content
+                result += f"샘플 청크:\n{sample}\n"
+
+            return result
+
+        except Exception as e:
+            logger.error(f"PDF 처리 실패: {e}")
+            return f"PDF 처리 중 오류 발생: {str(e)}"
+
+    async def _arun(self, file_path: str, run_manager: Optional[CallbackManagerForToolRun] = None) -> str:
+        """
+        PDF 처리 비동기 실행
+        """
+        return self._run(file_path, run_manager)
 
 
 class MemoryAccessTool(BaseTool):
@@ -254,3 +338,4 @@ def register_rag_tools_to_registry():
         registry._tools[name] = tool  # 직접 인스턴스 등록
 
     logger.info(f"📋 RAG Tools 등록 완료: {len(tools)}개")
+

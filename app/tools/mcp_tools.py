@@ -253,3 +253,4 @@ def register_mcp_tools_to_registry():
         registry._tools[name] = tool  # 직접 인스턴스 등록
 
     logger.info(f"📋 MCP Tools 등록 완료: {len(tools)}개")
+

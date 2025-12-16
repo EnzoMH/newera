@@ -89,3 +89,4 @@ class BaseMemory(ABC):
                 formatted.append(f"Human: {human}\nAI: {ai}")
 
         return "\n\n".join(formatted)
+

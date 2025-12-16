@@ -177,3 +177,4 @@ def get_mongodb_store() -> MongoDBMemoryStore:
         _mongodb_store = MongoDBMemoryStore()
         _mongodb_store.connect()
     return _mongodb_store
+

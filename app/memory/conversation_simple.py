@@ -76,7 +76,7 @@ class SimpleConversationMemory(BaseMemory):
             for item in self.buffer[-5:]:  # 최근 5개만
                 memory_text += f"Human: {item['human']}\nAI: {item['ai']}\n\n"
 
-            logger.debug(f"📖 메모리 로드: {len(self.buffer)}개 대화")
+            logger.debug(f"메모리 로드: {len(self.buffer)}개 대화")
 
             return {self.memory_key: memory_text.strip()}
 
@@ -143,3 +143,4 @@ def clear_all_memories():
         memory.clear()
     _memory_instances.clear()
     logger.info("🧹 모든 메모리 인스턴스 클리어됨")
+

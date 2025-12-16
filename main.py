@@ -16,9 +16,9 @@ from fastapi.middleware.cors import CORSMiddleware
 # 프로젝트 루트를 Python 경로에 추가
 sys.path.insert(0, str(Path(__file__).parent))
 
-from app.core.utils.port import get_port_from_env
 from app.core.rag import RAGSystem
 from app.api.dependencies import set_rag_system
+from app.core.utils.port import get_port_from_env
 
 # .env 파일 로드
 load_dotenv()
@@ -40,7 +40,7 @@ async def lifespan(app: FastAPI):
     """
     # Startup
     logger.info("=" * 60)
-    logger.info("🚀 VirtualFab RAG System 시작 중...")
+    logger.info("VirtualFab RAG System 시작 중...")
     logger.info("=" * 60)
     
     try:
@@ -67,7 +67,7 @@ async def lifespan(app: FastAPI):
     
     # Shutdown
     logger.info("=" * 60)
-    logger.info("🛑 VirtualFab RAG System 종료 중...")
+    logger.info("VirtualFab RAG System 종료 중...")
     logger.info("=" * 60)
 
 

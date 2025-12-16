@@ -12,7 +12,7 @@ class SourceDocument(BaseModel):
     filename: Optional[str] = Field(None, description="파일명")
     source: Optional[str] = Field(None, description="출처 정보")
     content: str = Field(..., description="문서 내용 미리보기", max_length=500)
-    score: Optional[float] = Field(None, description="유사도 점수", ge=0.0)
+    score: Optional[float] = Field(None, description="유사도 점수", ge=0.0, le=1.0)
     domain: Optional[str] = Field(None, description="도메인 분류")
     metadata: Dict[str, Any] = Field(default_factory=dict, description="추가 메타데이터")
 

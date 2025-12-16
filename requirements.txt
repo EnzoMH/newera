@@ -1,10 +1,9 @@
 fastapi==0.115.5
 uvicorn[standard]==0.32.1
-langchain>=0.3.10
-langchain-community>=0.3.10
-langchain-ollama>=0.2.2
-langchain-google-genai>=2.0.8
-langchain-core>=0.3.0
+langchain==0.3.10
+langchain-community==0.3.10
+langchain-ollama==0.2.2
+langchain-google-genai==2.0.8
 pydantic==2.10.3
 python-dotenv==1.0.1
 httpx==0.28.1
@@ -30,10 +29,6 @@ nltk==3.9.1
 scikit-learn==1.5.2
 numpy==1.26.4
 pandas==2.2.3
-
-# VectorDB
-faiss-cpu==1.9.0  # FAISS 벡터 데이터베이스
-chromadb==0.5.18  # ChromaDB 벡터 데이터베이스 (대안)
 
 # 하이브리드 Agentic Chunking
 llama-cpp-python==0.2.90  # 로컬 LLM (CPU/GPU)

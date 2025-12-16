@@ -15,6 +15,19 @@ from langchain_core.documents import Document
 from langchain_community.vectorstores import FAISS
 from langchain_community.docstore.in_memory import InMemoryDocstore
 
+logger = logging.getLogger(__name__)
+
+# FAISS GPU 검사
+try:
+    GPU_AVAILABLE = hasattr(faiss, 'StandardGpuResources') and faiss.get_num_gpus() > 0
+    if GPU_AVAILABLE:
+        logger.info(f" FAISS GPU 사용 가능 ({faiss.get_num_gpus()}개 GPU 감지)")
+    else:
+        logger.info(" FAISS CPU 모드")
+except Exception as e:
+    GPU_AVAILABLE = False
+    logger.warning(f" FAISS GPU 체크 실패, CPU 모드로 실행: {e}")
+
 from ..memory.conversation_simple import SimpleConversationMemory
 
 logger = logging.getLogger(__name__)
@@ -41,25 +54,30 @@ class SentenceTransformerEmbeddings:
 
 class FAISSVectorDB:
     """
-    FAISS 기반 벡터 데이터베이스
+    FAISS 기반 벡터 데이터베이스 (GPU 최적화)
     - Sentence Transformers 임베딩 사용
-    - 문서 청킹 및 인덱싱
-    - 유사도 검색
+    - GPU 가속 인덱싱 (IVF-PQ, Flat)
+    - 고성능 유사도 검색
     """
 
     def __init__(
         self,
-        embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2",
+        embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2", 
         index_path: str = "app/data/vectorstore/faiss_index",
-        persist_directory: str = "app/data/vectorstore"
+        persist_directory: str = "app/data/vectorstore",
+        index_type: str = "auto",  # "auto", "flat", "ivf_pq", "hnsw"
+        use_gpu: bool = True
     ):
         self.embedding_model = embedding_model
         self.index_path = Path(index_path)
         self.persist_directory = Path(persist_directory)
         self.persist_directory.mkdir(parents=True, exist_ok=True)
+        self.index_type = index_type
+        self.use_gpu = use_gpu and GPU_AVAILABLE
 
         # Sentence Transformer 임베딩 모델 초기화
         self.embeddings_model = SentenceTransformer(embedding_model)
+        self.embedding_dim = self.embeddings_model.get_sentence_embedding_dimension()
 
         # LangChain 호환 임베딩 래퍼
         self.embeddings = SentenceTransformerEmbeddings(self.embeddings_model)
@@ -67,10 +85,20 @@ class FAISSVectorDB:
         # FAISS 벡터 스토어
         self.vectorstore: Optional[FAISS] = None
 
+        # GPU 리소스 (GPU 사용시)
+        self.gpu_resource = None
+        if self.use_gpu:
+            try:
+                self.gpu_resource = faiss.StandardGpuResources()
+                logger.info("🚀 FAISS GPU 리소스 초기화 완료")
+            except Exception as e:
+                logger.warning(f"⚠️ GPU 리소스 초기화 실패, CPU 모드로 전환: {e}")
+                self.use_gpu = False
+
         # 메타데이터 저장
         self.metadata_file = self.persist_directory / "metadata.json"
 
-        logger.info(f"🎯 FAISS VectorDB 초기화: {embedding_model}")
+        logger.info(f"🎯 FAISS VectorDB 초기화: {embedding_model} ({'GPU' if self.use_gpu else 'CPU'} 모드, {self.index_type} 인덱스)")
 
     def initialize(self) -> bool:
         """벡터 데이터베이스 초기화"""
@@ -90,13 +118,53 @@ class FAISSVectorDB:
             return False
 
     def _create_empty_index(self):
-        """빈 FAISS 인덱스 생성"""
-        # 샘플 벡터로 인덱스 초기화 (나중에 실제 문서로 교체)
-        sample_embedding = self.embeddings.embed_query("샘플 텍스트")
-        dimension = len(sample_embedding)
+        """빈 FAISS 인덱스 생성 (GPU 최적화, 다양한 인덱스 타입 지원)"""
+        # 인덱스 타입 결정
+        if self.index_type == "auto":
+            # 자동 선택: GPU 사용 시 Flat, 아니면 IVF-PQ
+            index_type = "flat" if self.use_gpu else "ivf_pq"
+        else:
+            index_type = self.index_type
 
-        # FAISS 인덱스 생성 (직접 생성)
-        index = faiss.IndexFlatL2(dimension)
+        # FAISS 인덱스 생성
+        if index_type == "flat":
+            # Inner Product for cosine similarity (L2 정규화 임베딩 필요)
+            index = faiss.IndexFlatIP(self.embedding_dim)
+            logger.info("📍 Flat 인덱스 (정확한 검색, 빠른 소규모 DB)")
+            
+        elif index_type == "ivf_pq":
+            # IVF-PQ 인덱스 (메모리 효율적, 대용량 DB용)
+            nlist = min(100, max(4, int(np.sqrt(10000))))  # 클러스터 수 (최소 4, 최대 100)
+            m = 8        # PQ 세그먼트 수
+            nbits = 8    # 비트 수
+            quantizer = faiss.IndexFlatIP(self.embedding_dim)
+            index = faiss.IndexIVFPQ(quantizer, self.embedding_dim, nlist, m, nbits)
+            # IVF 인덱스는 train이 필요하지만 빈 상태에서는 스킵
+            logger.info(f"🗂️ IVF-PQ 인덱스 (메모리 효율, nlist={nlist})")
+            
+        elif index_type == "hnsw":
+            # HNSW 인덱스 (빠른 근사 검색)
+            M = 32  # 연결 수
+            index = faiss.IndexHNSWFlat(self.embedding_dim, M)
+            index.hnsw.efConstruction = 200  # 구축 시 탐색 깊이
+            index.hnsw.efSearch = 100        # 검색 시 탐색 깊이
+            logger.info(f"🕸️ HNSW 인덱스 (빠른 근사 검색, M={M})")
+            
+        else:
+            # 기본값: Flat
+            index = faiss.IndexFlatIP(self.embedding_dim)
+            logger.info("📍 기본 Flat 인덱스")
+
+        # GPU 사용 시 GPU로 이동
+        if self.use_gpu and index_type != "ivf_pq":  # IVF-PQ는 GPU 지원 제한적
+            try:
+                gpu_index = faiss.index_cpu_to_gpu(self.gpu_resource, 0, index)
+                index = gpu_index
+                logger.info(f"🚀 {index_type.upper()} 인덱스 GPU로 이동 완료")
+            except Exception as e:
+                logger.warning(f"⚠️ GPU 이동 실패, CPU에서 실행: {e}")
+
+        # LangChain FAISS 래퍼로 생성
         self.vectorstore = FAISS(
             embedding_function=self.embeddings,
             index=index,
@@ -104,7 +172,7 @@ class FAISSVectorDB:
             index_to_docstore_id={}
         )
 
-        logger.info(f"✅ 빈 FAISS 인덱스 생성 (차원: {dimension})")
+        logger.info(f"✅ {index_type.upper()} 인덱스 생성 완료 (차원: {self.embedding_dim}, {'GPU' if self.use_gpu and index_type != 'ivf_pq' else 'CPU'})")
 
     def _load_index(self) -> bool:
         """기존 FAISS 인덱스 로드"""

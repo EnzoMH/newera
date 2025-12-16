@@ -1,0 +1,53 @@
+# Docker Compose - Development Environment
+version: '3.8'
+
+services:
+  # Redis for caching
+  redis:
+    image: redis:7-alpine
+    container_name: virtualfab-redis-dev
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-dev-data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - dev-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+  # MongoDB for persistence
+  mongodb:
+    image: mongo:7
+    container_name: virtualfab-mongodb-dev
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=dev123
+      - MONGO_INITDB_DATABASE=virtualfab
+    volumes:
+      - mongodb-dev-data:/data/db
+    networks:
+      - dev-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+  # Backend (로컬에서 직접 실행 권장)
+  # python main.py
+
+networks:
+  dev-network:
+    driver: bridge
+
+volumes:
+  redis-dev-data:
+    driver: local
+  mongodb-dev-data:
+    driver: local

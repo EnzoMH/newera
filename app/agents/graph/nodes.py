@@ -42,12 +42,41 @@ class RAGAgentNodes:
             state["current_step"] = "Agent 초기화 중"
             state["progress"] = 10
 
-            # 메모리 로드 (나중에 구현)
-            # TODO: LangChain Memory에서 대화 히스토리 로드
-            state["conversation_history"] = []
+            # 메모리 키 설정 (기본값 또는 conversation_id 사용)
+            memory_key = state.get("conversation_id", "default")
+            state["memory_key"] = memory_key
 
+            # 메모리에서 대화 히스토리 로드
+            from ...memory import get_conversation_memory
+
+            memory = get_conversation_memory(memory_key)
+            memory_variables = memory.load_memory_variables({})
+
+            # 히스토리 형식 변환
+            formatted_history = []
+            if memory_variables:
+                history_text = memory_variables.get(memory_key, "")
+                if history_text:
+                    # 메모리 텍스트 파싱: "Human: ...\nAI: ..." 형식
+                    entries = history_text.split('\n\n')  # 각 대화 쌍 분리
+                    for entry in entries:
+                        if entry.strip():
+                            lines = entry.strip().split('\n')
+                            if len(lines) >= 2:
+                                human_line = lines[0].strip()
+                                ai_line = lines[1].strip()
+
+                                # Human과 AI 부분 추출
+                                human = human_line.replace("Human:", "").strip() if human_line.startswith("Human:") else human_line
+                                ai = ai_line.replace("AI:", "").strip() if ai_line.startswith("AI:") else ai_line
+
+                                if human and ai:  # 둘 다 내용이 있어야 추가
+                                    formatted_history.append({"human": human, "ai": ai})
+
+            state["conversation_history"] = formatted_history
             state["progress"] = 20
-            logger.info("✅ Agent 초기화 완료")
+
+            logger.info(f"✅ Agent 초기화 완료 - 메모리 키: {memory_key}, 히스토리: {len(formatted_history)}개")
 
         except Exception as e:
             logger.error(f"❌ Agent 초기화 실패: {e}")
@@ -135,13 +164,32 @@ class RAGAgentNodes:
 
         try:
             # 메모리 컨텍스트 활용
-            memory_context = ""
+            from ...memory import get_conversation_memory
+
+            memory_key = state.get("memory_key", "default")
+            memory = get_conversation_memory(memory_key)
+
+            # 메모리에서 관련 컨텍스트 로드
+            memory_variables = memory.load_memory_variables({"input": state["question"]})
+            memory_context = memory_variables.get(memory_key, "")
+
+            # 대화 히스토리도 활용
+            conversation_context = ""
             if state.get("conversation_history"):
                 recent_history = state["conversation_history"][-3:]  # 최근 3개
-                memory_context = "\n".join([
-                    f"이전 대화: {h.get('human', '')} → {h.get('ai', '')}"
+                conversation_context = "\n".join([
+                    f"이전 대화: Human: {h.get('human', '')} | AI: {h.get('ai', '')}"
                     for h in recent_history
                 ])
+
+            # 메모리 컨텍스트 통합
+            full_memory_context = ""
+            if memory_context:
+                full_memory_context += f"메모리 컨텍스트:\n{memory_context}\n\n"
+            if conversation_context:
+                full_memory_context += f"대화 히스토리:\n{conversation_context}"
+
+            memory_context = full_memory_context
 
             # 검색 컨텍스트 활용
             search_context = state.get("context", "")
@@ -161,8 +209,8 @@ class RAGAgentNodes:
             state["answer"] = answer
             state["sources"] = state.get("retrieved_docs", [])
             state["metadata"] = {
-                "llm_provider": "ollama",
-                "model": "hf.co/MyeongHo0621/Qwen2.5-3B-Korean:Q4_K_M",
+                "llm_provider": "llamacpp",
+                "model": "LGAI-EXAONE/EXAONE-4.0-1.2B-GGUF",
                 "context_used": bool(search_context),
                 "memory_used": bool(memory_context)
             }

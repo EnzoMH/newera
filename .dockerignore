@@ -4,49 +4,58 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
 venv/
+env/
 ENV/
-.venv
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
+.cursor/
 
 # Git
 .git/
 .gitignore
 
-# Data (로컬에서만 관리)
-data/crawled/
-data/chunks/
-*.pdf
-
 # Logs
-logs/
 *.log
-
-# Docker
-Dockerfile
-docker-compose.yml
-.dockerignore
-
-# Documentation
-*.md
-!README.md
+logs/
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Temporary
-*.tmp
-*.temp
-.cache/
+# Models (download separately)
+models/*.gguf
 
+# Data
+app/data/vectorstore/faiss_index/
 
+# Environment
+.env
+.env.local
 
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
 
+# Documentation
+README.md
+ARCHITECTURE.md
+docs/
+
+# Tests
+tests/
+*.test.py
+
+# Node (if exists)
+node_modules/
+frontend/

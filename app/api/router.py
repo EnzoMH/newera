@@ -4,7 +4,7 @@ API Router 통합
 """
 from fastapi import APIRouter
 
-from .routers import rag_router, health_router, system_router, agent_router
+from .routers import rag_router, health_router, system_router
 
 # 메인 API 라우터 생성
 router = APIRouter()
@@ -13,7 +13,6 @@ router = APIRouter()
 router.include_router(rag_router)
 router.include_router(health_router)
 router.include_router(system_router)
-router.include_router(agent_router)
 
 # 하위 호환성을 위한 export
 from .dependencies import set_rag_system
